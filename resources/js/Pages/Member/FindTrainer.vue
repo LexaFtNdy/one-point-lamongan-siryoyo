@@ -39,9 +39,9 @@ const submit = () => {
 onMounted(() => {
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-    tl.from('.header-anim', { y: -30, opacity: 0, duration: 0.8 })
-      .from('.question-section', { y: 40, opacity: 0, duration: 0.6, stagger: 0.15 }, '-=0.4')
-      .from('.submit-btn', { scale: 0.9, opacity: 0, duration: 0.4 }, '-=0.2');
+    tl.from('.header-anim', { y: -30, opacity: 0, duration: 0.8, clearProps: 'all' })
+      .from('.question-section', { y: 40, opacity: 0, duration: 0.6, stagger: 0.15, clearProps: 'all' }, '-=0.4')
+      .from('.submit-btn', { scale: 0.9, opacity: 0, duration: 0.4, clearProps: 'all' }, '-=0.2');
 });
 </script>
 

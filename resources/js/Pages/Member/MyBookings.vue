@@ -34,8 +34,8 @@ const getStatusConfig = (status) => {
 onMounted(() => {
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-    tl.from('.header-anim', { y: -20, opacity: 0, duration: 0.6 })
-      .from('.booking-card', { y: 40, opacity: 0, duration: 0.6, stagger: 0.15 }, '-=0.3');
+    tl.from('.header-anim', { y: -20, opacity: 0, duration: 0.6, clearProps: 'all' })
+      .from('.booking-card', { y: 40, opacity: 0, duration: 0.6, stagger: 0.15, clearProps: 'all' }, '-=0.3');
 });
 </script>
 

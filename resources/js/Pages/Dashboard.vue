@@ -20,16 +20,17 @@ onMounted(() => {
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
     // Animate banner
-    tl.from('.dashboard-banner', { y: 30, opacity: 0, duration: 0.8 })
-      .from('.banner-text', { y: 20, opacity: 0, duration: 0.6, stagger: 0.1 }, '-=0.4')
-      .from('.banner-btn', { scale: 0.9, opacity: 0, duration: 0.5 }, '-=0.2');
+    tl.from('.dashboard-banner', { y: 30, opacity: 0, duration: 0.8, clearProps: 'all' })
+      .from('.banner-text', { y: 20, opacity: 0, duration: 0.6, stagger: 0.1, clearProps: 'all' }, '-=0.4')
+      .from('.banner-btn', { scale: 0.9, opacity: 0, duration: 0.5, clearProps: 'all' }, '-=0.2');
 
     // Animate stat cards
     tl.from('.stat-card', { 
         y: 30, 
         opacity: 0, 
         duration: 0.6, 
-        stagger: 0.1 
+        stagger: 0.1,
+        clearProps: 'all'
     }, '-=0.2');
 });
 </script>

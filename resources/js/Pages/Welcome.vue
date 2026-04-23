@@ -18,19 +18,20 @@ onMounted(() => {
     const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
     // Header animation
-    tl.from('header', { y: -50, opacity: 0, duration: 1 })
+    tl.from('header', { y: -50, opacity: 0, duration: 1, clearProps: 'all' })
       
       // Hero text animation
-      .from('.hero-title', { y: 30, opacity: 0, duration: 0.8, stagger: 0.2 }, '-=0.5')
-      .from('.hero-subtitle', { y: 20, opacity: 0, duration: 0.8 }, '-=0.4')
-      .from('.hero-cta', { y: 20, opacity: 0, duration: 0.8 }, '-=0.4')
+      .from('.hero-title', { y: 30, opacity: 0, duration: 0.8, stagger: 0.2, clearProps: 'all' }, '-=0.5')
+      .from('.hero-subtitle', { y: 20, opacity: 0, duration: 0.8, clearProps: 'all' }, '-=0.4')
+      .from('.hero-cta', { y: 20, opacity: 0, duration: 0.8, clearProps: 'all' }, '-=0.4')
       
       // Features stagger
       .from('.feature-card', { 
           y: 40, 
           opacity: 0, 
           duration: 0.8, 
-          stagger: 0.15 
+          stagger: 0.15,
+          clearProps: 'all'
       }, '-=0.2');
 });
 </script>
