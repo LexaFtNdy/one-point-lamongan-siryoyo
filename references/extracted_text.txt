@@ -1,0 +1,3338 @@
+ RANCANG BANGUN APLIKASI REKOMENDASI PERSONAL TRAINER GYM ONE POINT LAMONGAN MENGGUNAKAN METODE RAPID APPLICATION DEVELOPMENT
+PROPOSAL SKRIPSI
+Oleh :
+NUR AHMAD SIROJ ROHMATILLAH
+NIM 21051204014
+UNIVERSITAS NEGERI SURABAYA
+FAKULTAS TEKNIK
+PROGRAM STUDI S1 TEKNIK INFORMATIKA
+2026
+RANCANG BANGUN APLIKASI REKOMENDASI PERSONAL TRAINER GYM ONE POINT LAMONGAN MENGGUNAKAN METODE RAPID APPLICATION DEVELOPMENT
+SKRIPSI
+Diajukan kepada Universitas Negeri Surabaya 
+untuk memenuhi persyaratan penyelesaian 
+Program Sarjana Teknik Informatika
+Oleh :
+NUR AHMAD SIROJ ROHMATILLAH
+NIM 21051204014
+UNIVERSITAS NEGERI SURABAYA
+FAKULTAS TEKNIK
+PROGRAM STUDI S1 TEKNIK INFORMATIKA
+2026
+ABSTRAK
+RANCANG BANGUN APLIKASI REKOMENDASI PERSONAL TRAINER GYM ONE POINT LAMONGAN MENGGUNAKAN METODE RAPID APPLICATION DEVELOPMENT
+Nama Penulis
+:
+Nur Ahmad Siroj Rohmatillah
+NIM
+:
+21051204014
+Program Studi
+:
+S1-Teknik Informatika
+Fakultas
+:
+Fakultas Teknik
+Nama Lembaga
+:
+Universitas Negeri Surabaya
+Pembimbing
+:
+Paramitha Nerisafitra, S.ST., M.Kom.
+Baby blues merupakan kondisi psikologis yang umum terjadi pada ibu pasca melahirkan, dengan prevalensi di Indonesia mencapai 60-70% pada tahun 2022. Penelitian ini berfokus pada pengembangan sistem rekomendasi dini baby blues berbasis website menggunakan metode Certainty Factor. Berbagai faktor seperti pandemi COVID-19, kurangnya sistem dukungan sosial, tekanan ekonomi, stigma kesehatan mental, serta pengaruh media sosial turut berkontribusi dalam meningkatnya kasus baby blues. Sistem rekomendasi yang dikembangkan mampu mengklasifikasikan tingkat risiko baby blues ke dalam empat kategori: tidak terjangkit, risiko rendah, risiko sedang, dan risiko berat, berdasarkan gejala yang dirasakan pengguna. Sistem ini dirancang untuk dapat digunakan oleh tiga peran pengguna (ibu, suami, dan orang terdekat) guna memberikan dukungan yang lebih komprehensif. Pembangunan platform menggunakan metode Agile untuk memberikan fleksibilitas dalam penyesuaian fitur dan perbaikan sistem berdasarkan umpan balik pengguna. Hasil penelitian menunjukkan bahwa sistem berhasil diimplementasikan dengan kemampuan mengidentifikasi tingkat risiko baby blues dan memberikan rekomendasi penanganan yang tepat sesuai dengan peran dan kategori. Pengujian dengan 100 responden menggunakan metode System Usability Scale (SUS) menghasilkan skor rata-rata 70.8, yang termasuk dalam kategori baik. Dengan adanya sistem ini, deteksi dini dan penanganan baby blues bisa lebih mudah dilakukan, sehingga membantu meningkatkan kesejahteraan mental ibu setelah melahirkan.
+Kata Kunci: Agile, Baby blues, Certainty Factor, Rekomendasi System Usability Scale.
+ABSTRACTDESIGN OF POST-NATAL BABY BLUES RECOMMENDATION SYSTEM USING THE POWER FACTOR METHOD
+Author
+:
+Muhammad Ainurrofiq Anwar Buhang
+NIM
+:
+21051204052
+Study Program
+:
+Bachelor’s Degree of Informatics Engineering
+Faculty
+:
+Faculty of Engineering
+Institution
+:
+Surabaya State University
+Preceptor
+:
+Paramitha Nerisafitra, S.ST., M.Kom.
+Baby blues is a common psychological condition that occurs in mothers after childbirth, with a prevalence in Indonesia reaching 60-70% in 2022. This research focuses on developing a website-based early recommendation system for baby blues using the Certainty Factor method. Various factors such as the COVID-19 pandemic, lack of social support systems, economic pressure, mental health stigma, and the influence of social media contribute to the increasing cases of baby blues. The developed recommendation system is able to classify the risk level of baby blues into four categories: not infected, low risk, medium risk, and high risk, based on symptoms experienced by users. This system is designed to be used by three user roles (mothers, husbands, and close relatives) to provide more comprehensive support. The platform development uses the Agile method to provide flexibility in adjusting features and improving the system based on user feedback. The results show that the system was successfully implemented with the ability to identify the risk level of baby blues and provide appropriate handling recommendations according to the role and category. Testing with 100 respondents using the System Usability Scale (SUS) method resulted in an average score of 70.8, which falls into the good category. With this system, early detection and management of baby blues can be more easily performed, thus helping to improve the mental well-being of mothers after childbirth.
+Keywords: Agile, Baby blues, Certainty Factor, Recommendation, System Usability Scale.
+SURAT PERNYATAAN KEORISINILAN SKRIPSI
+UNIVERSITAS NEGERI SURABAYA
+FAKULTAS TEKNIK
+PROGRAM STUDI S1 TEKNIK INFORMATIKA
+Alamat: Unesa Kampus Ketintang, Surabaya
+Telepon: +6231-7527527
+Yang bertanda tangan di bawah ini, saya
+Nama: Muhammad Ainurrofiq Anwar Buhang
+Tempat, Tanggal Lahir: Mojokerto, 28 Agustus 2002
+NIM: 21051204052
+Program Studi: S1-Teknik Informatika
+Alamat: Dsn. Penjalinwakul, Ds. Jeruk Seger,  
+Gedeg, Mojokerto
+Menyatakan dengan sesungguhnya bahwa
+Skripsi yang segera diajukan ini adalah benar-benar pekerjaan saya sendiri (bukan hasil jiplakan, baik sebagian atau seluruhnya).
+Apabila pada kemudian hari terbukti/dapat dibuktikan bahwa skripsi ini hasil jiplakan sebagaimana yang termaktub pada nomor 1), saya akan menanggung risiko diperkarakan oleh prodi Sistem Informasi Fakultas Teknik Unesa.
+Demikian surat pernyataan ini dibuat dengan kesadaran yang tinggi.
+Surabaya, 18 Juni 2025
+Yang menyatakan,
+Muhammad Ainurrofiq Anwar Buhang
+NIM. 21051204052
+HALAMAN PERSETUJUAN
+Skripsi Oleh
+:
+Muhammad Ainurrofiq Anwar Buhang
+NIM
+:
+21051204052
+Judul
+:
+Rancang Bangun Sistem Rekomendasi Baby blues Pasca Melahirkan Menggunakan Metode Certainty Factor
+Ini telah disetujui dan dinyatakan memenuhi syarat untuk diseminarkan.
+Surabaya, 18 Juni 2025
+Pembimbing,
+Paramitha Nerisafitra, S.ST., M.Kom
+NIP. 198905292019032013
+HALAMAN PENGESAHAN
+MOTTO DAN PERSEMBAHAN
+MOTTO
+“Selalu ada harga yang harus dibayar dalam setiap proses. Nikmati setiap lelahnya, karena di sanalah dirimu ditempa. Luaskan sabarmu, sejauh mungkin. Tak semua hal yang kau perjuangkan untuk menjadi versi terbaik dirimu akan berjalan mulus—akan ada luka, kecewa, dan jalan yang melelahkan. Tapi justru dari gelombang-gelombang itulah cerita hidupmu akan tumbuh dan bermakna. Maka meski tertatih, tetaplah melangkah. Tetap berjuang, karena prosesmu adalah bukti bahwa kau tidak pernah menyerah. Jadi tetap semangat yaaa!!!”
+PERSEMBAHAN
+Tiada lembar yang lebih bermakna dalam laporan skripsi ini selain lembar persembahan. Skripsi ini saya persembahkan kepada sosok-sosok paling istimewa dalam hidup saya sebagai bentuk penghargaan dan bukti cinta saya kepada Alm. Ayah, Alm. Budhe, dan Alm. Mbah Uti, terima kasih atas cinta, doa, dan segala pengorbanan yang tak terbalaskan meski ragamu telah tiada, semangat dan kasihmu tetap hidup dalam setiap langkahku. Untuk orang tua yang selalu mendampingi dengan doa dan kasih sayang tiada henti; kepada dosen-dosen, terutama dosen pembimbing saya, yang telah membimbing dan memberi ilmu dengan tulus; serta untuk sahabat dan teman-teman seperjuangan, terima kasih telah membersamai, memberi semangat, dan menjadi tempat berbagi di setiap fase perjuangan ini. Skripsi ini adalah wujud kecil dari segala doa, usaha, dan dukungan kalian. "Apa yang kita tanam dengan kerja keras, akan kita tuai dengan kebanggaan. Terus melangkah, meski perlahan."
+KATA PENGANTAR
+Puji syukur penulis haturkan kepada Allah SWT yang telah memberikan rahmat dan hidayah-Nya sehingga penulis dapat menyelesaikan penyusunan skripsi yang berjudul “Rancang Bangun Sistem Rekomendasi Baby blues Pasca Melahirkan Menggunakan Metode Certainty Factor”. 
+Skripsi ini diajukan untuk memenuhi persyaratan kelulusan mata kuliah skripsi pada Program Studi S1-Teknik Informatika Universitas Negeri Surabaya. Dalam proses penyusunan skripsi ini, penulis mendapatkan dukungan, saran, motivasi, dan bantuan dari berbagai pihak. Oleh karena itu, penulis mengucapkan terimakasih dan mendoakan semoga Allah SWT memberikan balasan terbaik kepada:
+Tuhan Yang Maha Esa, yang senantiasa menyertai, memberikan kekuatan, dan kemudahan dalam menyelesaikan penelitian ini.
+Ibu Paramitha Nerisafitra, S.ST., M.Kom. selaku dosen pembimbing sekaligus Kepala Program Studi Teknik Informatika, yang telah sabar dan teliti dalam memberikan arahan, bimbingan, dan masukan berharga selama proses penyusunan skripsi ini.
+Bapak Aditya Prapanca, S.T., M.Kom. dan bapak Ervin Yohannes, S.Kom., M.Kom., M.Sc., Ph.D., selaku dosen penguji, yang telah memberikan saran dan masukan yang sangat berarti untuk perbaikan skripsi ini.
+Seluruh dosen dan staf di lingkungan Teknik Informatika atas ilmu dan bantuan yang telah diberikan selama studi.
+Orang tua tercinta, yang selalu memberikan dukumgam moral dan doa tanpa batas sehingga penelitian ini dapat dilaksanakan.
+Keluarga besar penulis, nenek, paman, tante, dan saudara saudara yang memberikan dukungan dan doa selama ini.
+Teman-teman Jurusan Teknik Informatika khususnya Program Studi S-1 Teknik Informatika Angkatan 2021 yang saling mendukung dan berjuang bersama untuk dapat menyelesaikan studi sarjana. 
+Teman teman seperjuangan, yang senantiasa memberikan semangat dan dorongan selama penyusunan tugas akhr ini.
+Semua pihak yang tidak disebutkan satu per satu yang telah memberikan dukungan dan membantu skripsi ini dapat terselesaikan.
+Kepada semua responden dan pihak yang telah meluangkan waktu untuk berpartisipasi dalam penelitian ini, terima kasih atas kontribusi dan kepercayaannya.
+Terakhir, saya mengucapkan terima kasih kepada diri sendiri yang telah berusaha keras, tidak menyerah, dan tetap berjuang hingga akhir dalam menyelesaikan tugas akhir ini. Atas kesabaran, ketangguhan, dan komitmen yang telah saya tunjukkan selama proses ini, saya merasa bangga dan bersyukur atas pencapaian ini.
+Penulis menyadari bahwa skripsi ini masih jauh dari kesempurnaan. Oleh karena itu, saran dan kritik yang membangun sangat diharapkan oleh penulis demi perbaikan dan pengembangan ilmu di masa yang akan dating. Harapan penulis ialah hasil penelitian ini dapat memberikan manfaat bagi mahasiswa, akademisi, dan pihak pihak yang membutuhkan. 
+Akhir kata, semoga skripsi ini dapat bermanfaat dan menjadi referensi bagi penelitian selanjutnya.
+Surabaya, 18 Juni 2025
+Penulis,
+Muhammad Ainurrofiq Anwar Buhang
+DAFTAR ISI
+HALAMAN JUDULi
+ABSTRAKii
+ABSTRACTiv
+SURAT PERNYATAAN KEORISINALAN SKRIPSIv
+HALAMAN PERSETUJUANvi
+HALAMAN PENGESAHANvii
+MOTTO DAN PERSEMBAHANviii
+KATA PENGANTARix
+DAFTAR ISIxi
+DAFTAR TABELxiii
+DAFTAR GAMBARxiv
+BAB 1 PENDAHULUAN1
+A.Latar Belakang1
+C.Batasan Masalah5
+D.Rumusan Masalah6
+E.Tujuan Penelitian6
+F.Manfaat Penelitian6
+BAB II KAJIAN PUSTAKA9
+A.Teori Baby blues9
+B.Teori Metode Certainty Factor10
+C.System Usability Scale (SUS)12
+D.User Acceptance Testing (UAT)13
+E.Penelitian Terdahulu15
+F.Kerangka Konseptual16
+BAB III METODE PENELITIAN19
+A.Identifikasi Kebutuhan19
+B.Design21
+C.Development42
+D.Testing45
+E.Deployment53
+F.     Review54
+G.     Rencana Pengujian Sampel57
+BAB VI HASIL DAN PEMBAHASAN63
+A.Hasil63
+B.Pembahasan77
+C.Pengujian System Usability Scale (SUS)81
+D.Pengujian User Acceptance Testing (UAT)82
+BAB V KESIMPULAN83
+A.Kesimpulan83
+B.Saran84
+DAFTAR PUSTAKA85
+LAMPIRAN89
+DAFTAR TABEL
+Tabel 2.1 Penelitian Terdahulu15
+Tabel 3.1 Form Input32
+Tabel 3.2 Form Penilaian UAT User47
+Tabel 3.3 Form Penilaian UAT Admin50
+Tabel 3.4 Form Pernyataan SUS54
+Tabel 3.5 Sampel Certainty Factor Ibu (IB)58
+Tabel 3.6 Sampel Certainty Factor Suami (SU)59
+Tabel 3.7 Sampel Certainty Factor Orang Terdekat (OT)60
+Tabel 4.1 Hasil Perhitungan Peran Ibu79
+Tabel 4.2 Hasil Perhitungan Peran Suami80
+Tabel 4.3 Hasil Perhitungan Peran Orang Terdekat80
+DAFTAR GAMBAR
+Gambar 2.1 Kerangka Konseptual17
+Gambar 3.1 FlowChart22
+Gambar 3.2 Usecase Diagram23
+Gambar 3.3 Home Page27
+Gambar 3.4 Login Page27
+Gambar 3.5 Registrasi Page28
+Gambar 3.6 Dashboard28
+Gambar 3.7 Diagnosis Baby blues29
+Gambar 3.8 Create Diagnosis Baby blues29
+Gambar 3.9 Hasil Diagnosis30
+Gambar 4.1 Halaman Homepage64
+Gambar 4.2 Halaman Login64
+Gambar 4.3 Halaman Register65
+Gambar 4.4 Halaman Dashboard User66
+Gambar 4.5 Halaman Dashboard Admin67
+Gambar 4.6 Halaman Diagnosis User68
+Gambar 4.7 Halaman Persiapan Diagnosis68
+Gambar 4.8 Form Diagnosis69
+Gambar 4.9 Halaman Hasil Diagnosis71
+Gambar 4.10 Button Konsultasi71
+Gambar 4.11 Halaman Gejala72
+Gambar 4.12 Input Gejala73
+Gambar 4.13 Halaman Berita74
+Gambar 4.14 Input Berita75
+Gambar 4.15 View Berita75
+Gambar 4.16 Halaman User Management76
+Gambar 4.17 Halaman Informasi Profile76
+Gambar 4.18 Halaman Update Profile77
+Gambar 4.19 Entity Relationship Diagram78
+BAB 1
+PENDAHULUAN
+Latar Belakang
+Kesehatan dan kebugaran jasmani telah menjadi salah satu perhatian utama masyarakat, terutama di era pascapandemi COVID-19. Kesadaran akan pentingnya gaya hidup sehat semakin meningkat, mendorong masyarakat untuk aktif mengikuti berbagai aktivitas fisik dan kebugaran. Laporan dari Global Wellness Institute (2023) mencatat bahwa industri kebugaran global mengalami pertumbuhan rata-rata sebesar 5–10% setiap tahunnya. Indonesia menjadi salah satu pasar dengan perkembangan paling pesat dalam sektor ini, ditandai dengan menjamurnya pusat-pusat kebugaran di berbagai daerah, termasuk di kota-kota kecil (Ernawati et al., 2023).
+Di Kabupaten Lamongan, tren serupa juga terlihat. Berdasarkan data dari Dinas Pemuda dan Olahraga (2024), terdapat lebih dari 15 pusat kebugaran aktif yang tersebar di berbagai wilayah, salah satunya adalah Gym One Point Lamongan. Gym ini cukup dikenal masyarakat setempat dan menawarkan beragam fasilitas kebugaran serta layanan personal trainer untuk mendukung program latihan para anggotanya (Tetep et al., 2023).
+Namun demikian, dalam operasionalnya, Gym One Point Lamongan masih menghadapi beberapa tantangan yang berdampak pada kualitas pelayanan. Pertama, proses pemilihan personal trainer masih dilakukan secara manual. Proses ini kerap kali menimbulkan ketidakpuasan karena tidak semua anggota dapat menemukan trainer yang sesuai kebutuhan mereka (Semsem & Martin, 2022; Daraghmi & Daraghmi, 2022).
+Untuk mengatasi permasalahan tersebut, diperlukan solusi berupa pengembangan sistem aplikasi yang mampu merekomendasikan personal trainer secara otomatis berdasarkan profil dan tujuan latihan anggota. Salah satu pendekatan yang efektif untuk membangun sistem semacam ini adalah metode Rapid Application Development (RAD). Metode RAD menekankan pada kecepatan dalam pengembangan melalui pembuatan prototipe yang dapat diuji dan disesuaikan berdasarkan umpan balik pengguna secara iteratif (Daraghmi & Daraghmi, 2022).
+Berdasarkan latar belakang di atas, penulis mengusulkan penelitian berjudul “Rancang Bangun Aplikasi Rekomendasi Personal Trainer Gym One Point Lamongan Menggunakan Metode Rapid Application Development.”
+Aplikasi ini diharapkan mampu menjadi solusi inovatif dalam meningkatkan kualitas layanan Gym One Point Lamongan, memudahkan anggota dalam memilih trainer sesuai kebutuhan mereka, serta membantu manajemen dalam mengelola transaksi keuangan secara lebih efisien dan terintegrasi.
+Batasan Masalah
+Aplikasi hanya dirancang untuk Gym One Point Lamongan, dan tidak mencakup pusat kebugaran lainnya.
+Aplikasi hanya dikembangkan sebagai aplikasi berbasis website
+Pengembangan aplikasi menggunakan metode Rapid Application Development (RAD) hingga tahap pembuatan prototipe fungsional dan uji coba terbatas, bukan untuk implementasi penuh ke sistem produksi Gym One Point Lamongan.
+Tujuan Penelitian
+Adapun tujuan dalam penelitian ini sebagai berikut
+Merancang dan membangun aplikasi rekomendasi personal trainer yang dapat membantu anggota Gym One Point Lamongan memilih trainer sesuai dengan kebutuhan, tujuan latihan, dan preferensi mereka.
+Menerapkan metode Rapid Application Development (RAD) untuk mempercepat proses pengembangan aplikasi dan memastikan aplikasi sesuai dengan kebutuhan pengguna melalui pembuatan prototipe dan perbaikan secara iteratif.
+Manfaat Penelitian
+Bagi masyarakat terutama anggota Gym One Point 
+Bagi Masyarakat, khususnya anggota Gym One Point Lamongan, aplikasi yang dirancang dapat membantu mereka dalam memilih personal trainer yang sesuai dengan kebutuhan, tujuan, dan jadwal latihan, sehingga program kebugaran yang dijalani menjadi lebih efektif dan terarah.
+Bagi Universitas 
+Penelitian ini dapat menjadi salah satu referensi pengembangan aplikasi berbasis metode Rapid Application Development (RAD) yang dapat dimanfaatkan sebagai bahan pembelajaran dan pengembangan penelitian sejenis di masa mendatang. Penelitian ini juga diharapkan dapat menambah khasanah karya ilmiah di bidang teknologi informasi, khususnya pada pengembangan sistem informasi manajemen kebugaran.
+Bagi Penulis 
+Penelitian ini memberikan pengalaman langsung dalam merancang dan membangun sistem informasi berbasis kebutuhan nyata di lapangan. Mahasiswa dapat menerapkan ilmu yang telah diperoleh selama perkuliahan, sekaligus mengasah kemampuan dalam menganalisis kebutuhan sistem, merancang aplikasi, serta mengimplementasikan metode RAD secara tepat untuk menyelesaikan permasalahan yang ada di dunia industri kebugaran.
+BAB II
+KAJIAN PUSTAKA
+Teori Sistem Informasi
+Sistem informasi merupakan elemen krusial dalam meningkatkan efisiensi dan efektivitas operasional organisasi, termasuk dalam sektor kebugaran seperti gym. Sistem informasi sendiri didefinisikan sebagai sistem yang dirancang untuk mengumpulkan, mengelola, menyimpan, memproses, dan mendistribusikan informasi guna mendukung pengambilan keputusan dalam sebuah organisasi. Sistem ini merupakan kombinasi dari teknologi informasi, prosedur kerja, dan sumber daya manusia yang bekerja sama untuk menyediakan informasi yang relevan, akurat, dan tepat waktu. Dalam konteks gym, penerapan aplikasi sistem informasi menjadi semakin penting di era digital saat ini karena mampu mengotomatisasi berbagai fungsi, mulai dari pendaftaran anggota, penjadwalan latihan, pengelolaan data personal trainer, pencatatan transaksi pembayaran, hingga penyusunan laporan untuk keperluan manajerial (Anugrah et al., 2024).
+Data anggota dapat dikelola secara terpusat dan terstruktur, mencakup biodata, riwayat keanggotaan, jadwal latihan, hingga catatan progres latihan. Hal ini tidak hanya mempermudah pengambilan keputusan, tetapi juga meningkatkan akurasi serta ketepatan waktu informasi yang dibutuhkan. Informasi tentang personal trainer—termasuk kualifikasi, spesialisasi, jadwal ketersediaan, dan performa kerja—juga dapat diatur secara efisien, sehingga membantu anggota memilih trainer yang sesuai dengan kebutuhan mereka. Bahkan, beberapa sistem informasi mampu memberikan rekomendasi personal trainer berdasarkan data spesifik anggota.
+Selain itu, pencatatan transaksi pembayaran secara digital membantu mengurangi risiko kesalahan pencatatan dan menjadikan manajemen keuangan lebih terstruktur dan terukur, memberikan gambaran jelas tentang arus kas dan profitabilitas. Di sisi manajerial, aplikasi sistem informasi mendukung penyediaan laporan otomatis dalam bentuk grafik, tabel, maupun statistik terkait jumlah anggota aktif, pendapatan, serta tingkat kehadiran yang sangat berguna sebagai dasar strategi pemasaran dan pengambilan keputusan berbasis data.
+Secara keseluruhan, penerapan sistem informasi pada gym tidak hanya meningkatkan efisiensi operasional dan kualitas layanan yang diterima oleh anggota, tetapi juga memperkuat daya saing bisnis dalam pasar yang kompetitif. Sebagaimana disampaikan oleh Anugrah et al. (2024), sistem informasi manajemen menjadi faktor penting dalam membentuk kinerja organisasi. Dengan demikian, keberadaan sistem informasi telah menjadi kebutuhan dasar untuk menunjang keberhasilan dan keberlanjutan operasional gym di era modern.
+Personal Trainer dan Layanan Gym
+Personal trainer (PT) merupakan tenaga profesional di bidang kebugaran yang berperan penting dalam membantu individu mencapai tujuan kesehatan dan kebugaran melalui program latihan yang terstruktur, aman, dan disesuaikan dengan kondisi masing-masing anggota. Personal trainer tidak hanya berfungsi sebagai pendamping latihan, tetapi juga sebagai konsultan yang memberikan edukasi mengenai teknik latihan yang benar, pola hidup sehat, serta motivasi yang berkelanjutan bagi klien (Anam et al., 2023).
+Dalam praktiknya, personal trainer melakukan asesmen awal terhadap anggota, seperti kondisi fisik, tingkat kebugaran, riwayat kesehatan, serta tujuan latihan yang ingin dicapai, misalnya penurunan berat badan, peningkatan massa otot, atau peningkatan daya tahan tubuh. Hasil asesmen ini menjadi dasar dalam penyusunan program latihan yang realistis, sistematis, dan sesuai dengan kebutuhan individu (Anam et al., 2023). Pendekatan latihan yang personal dan terarah terbukti mampu meningkatkan efektivitas program kebugaran serta mengurangi risiko cedera.
+Selain aspek teknis, kualitas interaksi antara personal trainer dan anggota juga berpengaruh besar terhadap kepuasan dan keberhasilan latihan. Park dan Lee (2023) menyatakan bahwa anggota cenderung memberikan respons positif terhadap personal trainer yang mampu membangun komunikasi yang baik, memberikan motivasi secara konsisten, serta menyesuaikan pendekatan latihan berdasarkan perkembangan dan kondisi klien. Hal ini menjadikan pemilihan personal trainer yang sesuai sebagai faktor penting dalam layanan gym.
+Dari sisi manajemen gym, layanan personal trainer memberikan nilai tambah yang signifikan. Layanan ini tidak hanya meningkatkan kualitas pelayanan, tetapi juga membuka peluang pendapatan tambahan melalui paket latihan personal dan sesi latihan khusus. Keberadaan personal trainer yang profesional dan sesuai dengan kebutuhan anggota dapat meningkatkan loyalitas pelanggan serta memperkuat citra gym sebagai pusat kebugaran yang berkualitas dan berorientasi pada kepuasan anggota (Anam et al., 2023).
+Namun, dalam praktiknya, pemilihan personal trainer yang masih dilakukan secara manual sering kali menimbulkan ketidaksesuaian antara kebutuhan anggota dan karakteristik personal trainer yang dipilih. Oleh karena itu, diperlukan sebuah sistem yang mampu membantu anggota dalam memilih personal trainer berdasarkan kriteria tertentu, seperti tujuan latihan, jadwal ketersediaan, dan spesialisasi trainer. Dengan adanya dukungan sistem informasi yang terintegrasi, layanan personal trainer di gym dapat dikelola secara lebih efektif, objektif, dan berorientasi pada kebutuhan pengguna.
+Sistem Rekomendasi
+Sistem rekomendasi merupakan komponen penting dalam aplikasi modern, termasuk di gym untuk membantu anggota memilih personal trainer yang sesuai dengan tujuan kebugaran, ketersediaan waktu, dan preferensi lainnya (Ferretto et al., 2020). Sistem ini umumnya menggunakan metode seperti content-based filtering, collaborative filtering, atau metode hybrid untuk menghasilkan rekomendasi yang relevan. Misalnya, collaborative filtering menganalisis kesamaan preferensi pengguna untuk memberikan saran yang lebih akurat (Ferretto et al., 2020).
+Dalam konteks gym, sistem rekomendasi tidak hanya meningkatkan kepuasan anggota, tetapi juga mendukung efisiensi operasional serta memberikan keuntungan kompetitif dengan menghadirkan layanan yang lebih personal (Ferretto et al., 2020). Selain itu, intervensi yang dipersonalisasi dalam program kebugaran terbukti mampu meningkatkan hasil kesehatan, sehingga menegaskan pentingnya pemanfaatan teknologi dan data dalam layanan gym (Paltoglou et al., 2021). Penerapan sistem ini juga membantu gym menjaga loyalitas pelanggan melalui pengalaman latihan yang lebih menyenangkan dan terarah.
+Rapid Application Development (RAD)
+Rapid Application Development (RAD) adalah metode pengembangan perangkat lunak yang menekankan kecepatan, fleksibilitas, dan kolaborasi intensif antara pengembang dan pengguna, melalui tahapan iteratif seperti perencanaan kebutuhan, pembuatan prototipe, konstruksi, dan implementasi (Anisa & Wildan, 2024). Metode ini sangat relevan untuk pengembangan aplikasi Gym One Point Lamongan karena mampu menyesuaikan fitur secara cepat terhadap perubahan kebutuhan pengguna.
+Penelitian menunjukkan bahwa RAD dapat mempercepat waktu pengembangan aplikasi dari rata-rata 180 hari menjadi hanya 30–90 hari, sehingga sangat efektif untuk proyek yang menuntut respons cepat (Syifa et al., 2023). Selain itu, RAD dinilai cocok untuk proyek yang memerlukan keterlibatan pengguna secara intensif dan umpan balik berkelanjutan, yang penting dalam meningkatkan kepuasan dan pengalaman pengguna (Setiawan et al., 2024).
+Keunggulan utama RAD, seperti prototyping dan iterasi cepat, memungkinkan aplikasi gym mengakomodasi fitur penting seperti sistem rekomendasi personal trainer dan manajemen transaksi digital sesuai kebutuhan anggota (Anisa & Wildan, 2024). Dengan demikian, RAD mendukung keberhasilan pengembangan aplikasi gym yang responsif dan efisien, sekaligus memberikan nilai tambah bagi pengguna dan pengelolaan gym.
+Black Box Testing
+Black box testing adalah metode pengujian perangkat lunak yang menilai fungsionalitas aplikasi tanpa melihat struktur internal atau kode sumber (Martin-Lopez et al., 2021). Metode ini sangat sesuai untuk menguji fitur utama aplikasi Gym One Point Lamongan, seperti sistem rekomendasi, pemesanan personal trainer, agar berfungsi sesuai spesifikasi dan kebutuhan pengguna. Penguji berinteraksi dengan aplikasi melalui berbagai masukan dan mengevaluasi keluarannya, sehingga fokus pada pengalaman pengguna (Martin-Lopez et al., 2021).
+Selain efektif untuk aplikasi berbasis web dan RESTful API, black box testing juga mempercepat validasi fungsionalitas tanpa perlu memahami kode internal (Martin-Lopez et al., 2021). Penelitian Ayuningtyas et al. (2023) menegaskan pentingnya metode ini dalam mengevaluasi interaksi pengguna dengan antarmuka dan mendeteksi masalah yang tidak terlihat hanya dari kode. Dengan demikian, black box testing membantu memastikan aplikasi memenuhi harapan pengguna dan mendukung keberhasilan operasional gym di era digital (Ayuningtyas et al., 2023).
+Penelitian Terdahulu
+Berdasarkan tinjauan literatur yang telah dilakukan, banyak penelitian dan pengembangan yang berfokus pada pembuatan platform berbasis website atau aplikasi untuk mendukung manajemen layanan kebugaran, termasuk pengelolaan anggota, personal trainer, transaksi digital, dan sistem rekomendasi. Penelitian-penelitian sebelumnya ini menjadi acuan yang berharga dalam pengembangan aplikasi sistem informasi Gym One Point Lamongan. Referensi-referensi tersebut mempermudah dalam menyusun kerangka acuan yang relevan untuk mendukung pengembangan lebih lanjut dari proyek ini, sehingga aplikasi yang dihasilkan dapat sesuai dengan kebutuhan pengguna dan mendukung pengelolaan gym secara efektif.
+Tabel 2.1 Penelitian Terdahulu
+Judul
+Peneliti (Tahun)
+Kesimpulan
+Android-based Protrainer Application Development to Support Personal Trainer Services
+Purwantor, D. (2022)
+Aplikasi berbasis Android dapat meningkatkan efektivitas layanan personal trainer dengan menyediakan fitur latihan yang terstruktur dan mudah diakses oleh pengguna.
+The Effectiveness of a Personalized Virtual Fitness Trainer in Teaching Physical Education by Applying the Artificial Intelligent Algorithm
+Mokmin, N. A. M. (2020)
+Pelatih virtual yang dipersonalisasi dengan algoritma AI terbukti efektif dalam mendukung proses pembelajaran jasmani dan meningkatkan partisipasi pengguna.
+The Relationship Between Technological Capabilities and Organizational Impact: Direct and Indirect Routes for Employed and Self-Employed Personal Fitness Trainers
+García-Fernández, J., Gálvez-Ruíz, P., Gómez-Millán, M. R. B., Puyana, M. G., & Cepeda-Carrión, I. (2020)
+Kapabilitas teknologi pelatih pribadi berkontribusi terhadap dampak organisasi, baik secara langsung maupun tidak langsung, serta memperkuat kerja sama dengan gym.
+Survei Tingkat Kepuasan Member terhadap Program Latihan dan Jasa Layanan yang Diberikan oleh Trainer di Queen Gym Sedayu Bantul Yogyakarta
+Pambudi, L. & Astuti, R. P. (2023)
+Kepuasan member sangat dipengaruhi oleh kualitas program latihan dan layanan trainer; konsistensi serta perhatian pelatih menjadi faktor penting bagi loyalitas member.
+Kerangka Konseptual
+Permasalahan yang terjadi di Gym One Point Lamongan saat ini adalah proses pemilihan personal trainer oleh anggota yang masih dilakukan secara manual, sehingga anggota sering kali kesulitan menemukan trainer yang sesuai dengan kebutuhan, tujuan latihan, dan preferensi waktu mereka. Selain itu, sistem transaksi pembayaran juga masih dilakukan secara konvensional tanpa pencatatan yang terintegrasi, sehingga berpotensi menimbulkan kesalahan pencatatan dan menyulitkan manajemen dalam memantau laporan keuangan secara real time.
+Untuk mengatasi permasalahan tersebut, diperlukan sebuah solusi berupa aplikasi sistem informasi yang mampu memberikan rekomendasi personal trainer sesuai dengan data dan preferensi anggota, serta menyediakan sistem transaksi digital yang dapat mencatat dan mengelola pembayaran anggota secara otomatis. Aplikasi ini dikembangkan menggunakan metode Rapid Application Development (RAD) yang mengutamakan kecepatan pengembangan melalui pembuatan prototipe, pengujian langsung oleh pengguna, serta penyempurnaan aplikasi secara bertahap berdasarkan masukan dari pengguna.
+Dengan adanya aplikasi ini, diharapkan anggota Gym One Point Lamongan akan lebih mudah dalam memilih personal trainer yang sesuai dengan tujuan latihan mereka, serta dapat melakukan transaksi pembayaran dengan lebih praktis, cepat, dan aman. Bagi pihak manajemen gym, aplikasi ini akan membantu dalam pencatatan transaksi dan pembuatan laporan keuangan secara lebih efektif dan transparan, sehingga mendukung peningkatan kualitas layanan dan operasional Gym One Point Lamongan.
+Halaman ini sengaja dikosongkan
+BAB III
+METODOLOGI PENELITIAN
+Identifikasi Kebutuhan
+Tahap identifikasi kebutuhan merupakan tahap awal dalam metode Rapid Application Development (RAD) yang bertujuan untuk memahami kebutuhan pengguna dan sistem dalam pengembangan aplikasi rekomendasi personal trainer dan transaksi Gym One Point Lamongan. Tahap ini dilakukan agar sistem yang  dikembangkan sesuai dengan kebutuhan pengguna serta proses bisnis yang berjalan di Gym One Point Lamongan.
+Identifikasi kebutuhan dilakukan dengan melibatkan pengguna utama sistem, yaitu member gym, personal trainer, dan admin gym. Pengumpulan data dilakukan melalui studi literatur dan wawancara
+3.1.1 Pengguna Sistem
+Aplikasi yang dikembangkan memiliki tiga jenis pengguna utama, yaitu:
+Member Gym
+Member gym merupakan pengguna utama aplikasi yang menggunakan sistem untuk melihat rekomendasi personal trainer sesuai dengan kebutuhan latihan serta mengakses informasi jadwal latihan.
+Personal Trainer
+Personal trainer berperan sebagai penyedia layanan latihan. Melalui sistem ini, personal trainer dapat mengelola profil, jadwal latihan, serta menerima permintaan sesi latihan dari member. Data personal trainer digunakan sebagai dasar dalam proses rekomendasi yang dihasilkan oleh sistem.
+Admin Gym
+Admin gym bertugas mengelola data member dan data personal trainer, serta memastikan sistem berjalan sesuai dengan kebutuhan operasional Gym One Point Lamongan.
+3.1.2 Metode Pengumpulan Data
+Untuk Metode pengumpulan data yang digunakan dalam tahap identifikasi kebutuhan adalah sebagai berikut:
+Studi Literatur
+Studi literatur dilakukan dengan mengkaji buku, jurnal, dan artikel ilmiah yang berkaitan dengan sistem rekomendasi, aplikasi gym, serta metode Rapid Application Development (RAD). Literatur tersebut digunakan sebagai dasar teori dan acuan dalam perancangan serta pengembangan sistem aplikasi rekomendasi personal trainer Gym One Point Lamongan.
+Wawancara:
+Wawancara dilakukan dengan pihak pengelola Gym One Point Lamongan, personal trainer, dan beberapa member gym untuk memperoleh informasi mengenai kebutuhan pengguna, kriteria dalam pemilihan personal trainer, serta permasalahan yang dihadapi dalam proses rekomendasi personal trainer.
+Design
+Flowchart
+Flowchart merupakan representasi grafis yang menggambarkan urutan dan alur proses dalam sistem aplikasi rekomendasi personal trainer dan transaksi Gym One Point Lamongan menggunakan simbol-simbol standar. Flowchart ini menunjukkan tahapan interaksi aktor yang terlibat, yaitu Member Gym, Personal Trainer, dan Admin Gym, mulai dari proses pendaftaran, pemilihan dan rekomendasi personal trainer, pengelolaan jadwal latihan, serta pengelolaan data oleh admin.
+Gambar 3.1 FlowChart
+Usecase Diagram
+Aplikasi rekomendasi personal trainer Gym One Point Lamongan memiliki tiga aktor utama yang terlibat, yaitu Member Gym, Personal Trainer, dan Admin Gym. Setiap aktor memiliki peran dan fungsi yang berbeda dalam sistem ini. Member Gym berperan dalam menginput kebutuhan latihan dan melihat hasil rekomendasi personal trainer. Personal Trainer berperan dalam mengelola profil serta jadwal latihan yang menjadi dasar dalam proses rekomendasi. Admin Gym berperan dalam mengelola data member dan personal trainer serta melakukan monitoring terhadap sistem. Berikut adalah gambaran umum Usecase Diagram untuk aplikasi rekomendasi personal trainer Gym One Point Lamongan:
+Gambar 3.2 Usecase Diagram
+Login
+Pengguna (Member Gym, Personal Trainer, dan Admin Gym) dapat masuk ke dalam sistem dengan melakukan autentikasi menggunakan email dan password. Sistem akan menampilkan pesan error apabila terjadi kesalahan input atau akun tidak terdaftar.
+Input Kebutuhan Latihan
+Member Gym dapat menginput kebutuhan latihan seperti tujuan latihan, preferensi, dan waktu latihan yang akan digunakan sebagai dasar dalam proses rekomendasi personal trainer. Sistem akan menampilkan peringatan apabila data yang dimasukkan tidak lengkap.
+Proses Rekomendasi Trainer
+Sistem akan mengolah data kebutuhan dan preferensi yang telah dimasukkan oleh member serta data personal trainer untuk menghasilkan rekomendasi personal trainer yang sesuai.
+Lihat Rekomendasi Personal Trainer
+Member Gym dapat melihat hasil rekomendasi personal trainer yang diberikan oleh sistem berdasarkan kebutuhan latihan yang telah diinputkan.
+Lihat Detail Profil Personal Trainer
+Member Gym dapat melihat informasi lengkap personal trainer, seperti pengalaman, spesialisasi, dan informasi pendukung lainnya sebagai bahan pertimbangan.
+Lihat Jadwal Latihan Personal Trainer
+Member Gym dapat melihat jadwal latihan yang dimiliki oleh personal trainer untuk menyesuaikan dengan waktu latihan yang diinginkan.
+Kelola Profil Personal Trainer
+Personal Trainer dapat mengelola profil mereka, termasuk informasi diri, spesialisasi, pengalaman, dan data pendukung lainnya. Sistem akan memberikan peringatan apabila data yang dimasukkan tidak valid.
+Kelola Jadwal Latihan
+Personal Trainer dapat mengatur dan memperbarui jadwal latihan yang tersedia agar dapat dilihat oleh member dalam proses pemilihan trainer.
+Kelola Data Member
+Admin Gym dapat mengelola data member yang terdaftar dalam sistem, seperti menambah, mengubah, atau menghapus data sesuai kebutuhan.
+Kelola Data Personal Trainer
+Admin Gym dapat mengelola data personal trainer yang digunakan dalam sistem rekomendasi, termasuk validasi data agar tetap akurat.
+Monitoring Sistem
+Admin Gym dapat memantau aktivitas sistem untuk memastikan aplikasi berjalan dengan baik dan sesuai dengan fungsinya.
+Laporan
+Admin Gym dapat melihat laporan terkait penggunaan sistem, seperti jumlah member, personal trainer, dan aktivitas dalam aplikasi.
+Logout
+Pengguna (Member Gym, Personal Trainer, dan Admin Gym) dapat keluar dari sistem setelah selesai menggunakan aplikasi.
+Penjelasan Role Pengguna:
+Member Gym: Member Gym merupakan pengguna utama dalam sistem yang berperan dalam menggunakan fitur rekomendasi personal trainer. Member dapat menginput kebutuhan latihan, melihat hasil rekomendasi personal trainer, serta mengakses informasi profil dan jadwal latihan personal trainer sebagai bahan pertimbangan dalam memilih trainer yang sesuai.
+Personal Trainer: Personal Trainer berperan sebagai penyedia layanan latihan yang datanya digunakan dalam sistem rekomendasi. Personal Trainer dapat mengelola profil pribadi, seperti informasi diri, spesialisasi, dan pengalaman, serta mengatur jadwal latihan yang akan ditampilkan kepada member.
+Admin Gym: Admin Gym berperan dalam mengelola dan mengawasi jalannya sistem. Admin memiliki hak akses untuk mengelola data member dan personal trainer, serta melakukan monitoring terhadap aktivitas sistem guna memastikan aplikasi berjalan dengan baik.
+Wireframe Lo-FI
+Wireframe low-fidelity adalah gambaran sederhana dari tampilan sistem yang menggambarkan fungsionalitas dasar tanpa elemen desain estetika. Berikut adalah komponen dasar dari Wireframe Lo-Fi:
+Home Page
+Gambar 3.3 Home Page
+Login Page
+Gambar 3.4 Login Page
+Registrasi Page
+Gambar 3.5 Registrasi Page
+Dashboard
+Gambar 3.6 Dashboard
+Diagnosis Baby blues
+Gambar 3.7 Diagnosis Baby blues
+Create Diagnosis Baby blues
+Gambar 3.8 Create Diagnosis Baby blues
+Hasil Diagnosis
+Gambar 3.9 Hasil Diagnosis
+Certainty Factor Method
+Metode Certainty Factor (CF) digunakan untuk merepresentasikan dan menangani ketidakpastian dalam sistem berbasis pengetahuan, seperti sistem rekomendasi Baby blues. Certainty Factor diterapkan guna menganalisis gejala-gejala yang dilaporkan oleh pengguna dan memberikan estimasi probabilitas baby blues berdasarkan data psikolog dan ibu yang dikumpulkan melalui wawancara.
+Proses Certainty Factor
+Input Gejala
+Setiap anggota keluarga, termasuk ibu pasca melahirkan, suami, dan orang terdekat, memiliki peran penting dalam mengidentifikasi gejala seperti rasa cemas, perubahan suasana hati, atau kelelahan yang dialami oleh ibu setelah melahirkan. Form input ini dirancang untuk tiga pihak, yaitu ibu, suami, dan orang terdekat, agar dapat memberikan pandangan yang lebih komprehensif terkait kondisi ibu pasca melahirkan dari berbagai perspektif. Untuk memastikan kualitas dan relevansi pertanyaan yang ada dalam form input ini, saya bekerja sama dengan ahli psikolog yang memiliki pengalaman dalam bidang kesehatan mental, khususnya dalam mendeteksi gejala baby blues pada ibu pasca melahirkan. Pertanyaan-pertanyaan ini telah dirancang secara spesifik berdasarkan konsultasi dan masukan dari psikolog tersebut dengan tujuan untuk mengidentifikasi gejala emosional, fisik, dan mental yang dialami oleh ibu. Selain itu, pertanyaan juga menyoroti pengaruh lingkungan keluarga, termasuk peran suami dan orang terdekat dalam mendukung ibu setelah proses melahirkan. Setiap pertanyaan yang disusun telah melalui validasi oleh psikolog untuk memastikan bahwa informasi yang diperoleh dapat digunakan secara efektif dalam mendeteksi gejala awal baby blues atau bahkan kondisi yang lebih serius seperti postpartum depression. Dengan demikian, form ini diharapkan memberikan gambaran menyeluruh yang akurat terkait kondisi ibu pasca melahirkan, sehingga intervensi yang tepat bisa segera dilakukan.
+Tabel 3.1 Form Input
+No.
+Ibu
+Suami
+Orang Terdekat
+1
+Apakah kehamilan terjadi karena kemauan ibu?
+Apakah Anda saat ini memiliki pekerjaan tetap?
+Apakah orang terdekat mengetahui jika ibu memiliki riwayat gangguan mental sebelumnya?
+2
+Apakah ibu pernah menjalani proses kehamilan sebelumnya?
+Apakah jarak tempat kerja Anda cukup menyulitkan untuk sering pulang tepat waktu?
+Apakah orang terdekat mengetahui ekspektasi ibu terkait metode persalinan yang diinginkan atau direncanakan?
+3
+Apakah ibu bekerja? 
+Apakah Anda merasa percaya diri saat merawat bayi secara mandiri?
+Apakah orang terdekat melihat ibu mendapatkan dukungan dari keluarga atau lingkungan selama masa kehamilan?
+4
+Apakah lokasi kerja ibu jauh dengan tempat tinggal?
+apakah anda sering berinisiatif menggantikan istri dalam mengasuh bayi, tanpa diminta?
+Apakah orang terdekat melihat ibu menerima bantuan praktis atau emosional setelah melahirkan?
+5
+Apakah ibu ingin menjadi seorang ibu rumah tangga?
+Pernahkah Anda merasa bingung menghadapi perubahan emosional istri setelah melahirkan?
+Apakah orang terdekat memperhatikan adanya dukungan sosial yang diterima ibu sebagai orangtua baru?
+6
+Apakah ada konflik dalam pernikahan ibu?
+Apakah Anda merasa tahu cara yang paling tepat untuk menenangkan istri saat ia stres?
+Apakah orang terdekat sering mendengar ibu mengeluh tentang fisik atau perasaan selama kehamilan?
+7
+Apakah suami mendampingi ibu selama kehamilan, baik secara fisik atau emosional?
+Apakah Anda pernah mendampingi istri menjalani pemeriksaan rutin kehamilan dan berbicara dengan tenaga medis?
+Apakah orang terdekat melihat ibu mengeluhkan kondisi fisik atau emosional setelah proses persalinan?
+8
+Apakah kondisi finansial ibu dan keluarga kurang untuk mendukung kehamilan?
+Apakah Anda merasa istri Anda sering menghindari kontak fisik atau pembicaraan mendalam?
+Apakah orang terdekat memperhatikan ibu sering merasa cemas atau gelisah setelah melahirkan?
+9
+Apakah ibu kurang tidur dalam satu hari?
+Menurut Anda, apakah Anda cukup bisa mendengarkan keluh kesah istri dengan empati?
+Apakah orang terdekat melihat perubahan suasana hati yang tiba-tiba atau drastis pada ibu pasca melahirkan?
+10
+Apakah nutrisi ibu selama kehamilan sudah cukup dan lengkap?
+Apakah Anda merasa memiliki hubungan emosional yang hangat dengan istri?
+Apakah orang terdekat merasa ibu terlihat kelelahan yang tidak wajar, meskipun cukup beristirahat?
+11
+Apakah ibu memiliki impian tentang proses melahirkan, seperti memilih metode caesar atau normal?
+Pernahkah Anda merasa seperti “orang asing” di rumah sendiri setelah kelahiran anak?
+Apakah orang terdekat melihat ibu sering menangis atau menunjukkan kesedihan tanpa alasan yang jelas?
+12
+Apakah ibu merasakan tekanan selama kehamilan?
+Apakah Anda tetap berusaha menjaga komunikasi intens dengan istri setelah kelahiran anak?
+Apakah orang terdekat menyadari bahwa ibu kehilangan minat pada hobi atau aktivitas yang biasa disukai?
+13
+Apakah hubungan ibu dengan orang tua kandungnya baik?
+Apakah Anda merasa menjadi sosok yang dibutuhkan secara emosional oleh istri selama masa adaptasi ini?
+Apakah orang terdekat melihat ibu kesulitan membangun ikatan emosional dengan bayi?
+14
+Apakah hubungan ibu dengan mertua baik?
+Apakah Anda menyadari perubahan suasana hati istri yang terjadi secara tiba-tiba atau tidak terduga?
+Apakah orang terdekat mendengar ibu mengungkapkan perasaan tidak berharga atau bersalah sebagai seorang ibu?
+15
+Apakah Ibu merasa lebih mudah atau lebih nyaman berbicara dengan teman (sahabat) daripada dengan keluarga (suami, orang tua, mertua)?
+Selama kehamilan istri, apakah Anda merasa telah memberikan dukungan yang konsisten secara emosional dan praktis?
+Apakah orang terdekat melihat perubahan nafsu makan ibu yang tidak biasa, seperti makan berlebihan atau kehilangan selera makan?
+16
+Apakah ibu mendapat dukungan dari orang tua kandung dan mertua selama kehamilan?
+Apakah Anda menemani istri selama proses kelahiran anak?
+Apakah orang terdekat memperhatikan ibu sering merasa kesepian atau terisolasi meskipun dikelilingi keluarga?
+17
+Apakah suami memiliki ekspektasi terhadap metode melahirkan yang akan dijalani ibu?
+Apakah Anda memperhatikan asupan gizi istri selama dan setelah kehamilan?
+Apakah orang terdekat mengetahui ibu mengalami kesulitan tidur atau gangguan tidur?
+18
+Apakah orang tua atau mertua memiliki ekspektasi terkait metode melahirkan ibu?
+Apakah Anda dan istri sempat mencari pengetahuan seputar pengasuhan sebelum anak lahir?
+Apakah orang terdekat menyadari ibu menjadi mudah tersinggung atau cepat marah?
+19
+Apakah ibu memiliki waktu yang cukup untuk berolahraga selama kehamilan?
+Apakah istri Anda sempat berolahraga ringan secara rutin selama masa kehamilan?
+Apakah orang terdekat melihat ibu merasa tertekan oleh tanggung jawab sebagai orangtua baru?
+20
+Apakah ibu merasa nyaman dengan perubahan bentuk tubuh selama kehamilan dan setelah melahirkan?
+Setelah persalinan, apakah Anda merasa cukup aktif membantu istri dalam mengurus bayi?
+Apakah orang terdekat merasa ibu sulit untuk meminta atau menerima bantuan dari orang lain?
+21
+Apakah ibu pernah merasa ingin menjauh dari bayi atau merasa tidak nyaman dengan bayi?
+Apakah Anda meluangkan waktu secara rutin untuk menjaga kualitas waktu bersama anak?
+Apakah orang terdekat melihat ibu mengalami kecemasan yang sulit dijelaskan pasca melahirkan?
+22
+Apakah suami mendampingi ibu saat melahirkan?
+Apakah Anda memberikan ruang bagi istri untuk memiliki waktu pribadi (me-time)?
+Apakah orang terdekat melihat ibu menjadi sangat sensitif terhadap kritik atau komentar orang lain?
+23
+Apakah orang tua atau mertua mendampingi ibu saat melahirkan?
+Apakah Anda bersedia menjalankan tugas perawatan bayi seperti menyusui dengan botol, mengganti popok, atau menidurkan anak?
+Apakah orang terdekat merasa ibu ragu atau merasa tidak mampu menjalankan peran sebagai ibu?
+24
+Apakah ibu merasa bahagia saat melihat bayi yang baru dilahirkan?
+Apakah pola tidur Anda dan istri terganggu sejak kelahiran anak?
+Apakah orang terdekat mengamati ibu kesulitan mengendalikan emosi atau perasaan setelah melahirkan?
+25
+Apakah ibu menerima bantuan dalam merawat bayi setelah melahirkan?
+Apakah Anda memperhatikan bahwa istri mudah tersinggung atau marah tanpa sebab yang jelas?
+Apakah orang terdekat memperhatikan ibu cepat merasa lelah meskipun aktivitas fisik tidak berat?
+26
+Apakah ibu memiliki waktu untuk dirinya sendiri (me-time) setelah melahirkan?
+Apakah istri pernah mengalami gangguan psikologis sebelumnya?
+Apakah orang terdekat melihat ibu mulai menarik diri dari interaksi sosial di lingkungan sekitar?
+27
+Apakah ibu merasa kesepian meskipun ada orang di sekitar?
+Apakah istri Anda sering merasa tidak dimengerti meskipun Anda berusaha memberikan dukungan?
+Apakah orang terdekat memperhatikan adanya perubahan perilaku yang tidak biasa dari ibu atau mengkhawatirkan setelah persalinan?
+28
+Apakah ibu merasa bersalah atau merasa dirinya tidak mampu menjadi ibu yang baik?
+Apakah istri Anda terlihat mudah merasa cemas terhadap hal-hal kecil setelah melahirkan?
+Apakah orang terdekat merasa ibu sulit mengekspresikan perasaan atau pikiran secara terbuka?
+29
+Apakah proses pemberian ASI berjalan lancar?
+Apakah istri Anda pernah menyebut bahwa hidupnya terasa tidak berarti atau hampa?
+Apakah orang terdekat melihat ibu kurang bersemangat dalam merawat atau berinteraksi dengan bayinya dibanding sebelumnya?
+30
+Apakah ibu merasa sulit mengendalikan emosi seperti mudah marah, gelisah, atau cemas secara berlebihan?
+Apakah istri Anda sering terlihat lelah secara berlebihan meski aktivitasnya tidak terlalu berat?
+Apakah orang terdekat mendengar ibu menghindari pembicaraan tentang bayi atau pengalaman kehamilan?
+31
+Apakah suami membantu ibu dalam proses pengasuhan bayi setelah melahirkan?
+Saat bayi tidur, apakah istri kesulitan beristirahat atau tetap merasa gelisah?
+Apakah orang terdekat melihat ibu menjadi lebih gugup atau cemas saat bertemu banyak orang atau di acara sosial?
+32
+Apakah waktu pengasuhan bayi dibagi antara ibu dan suami?
+Apakah Anda memperhatikan bahwa istri kehilangan minat pada aktivitas yang dulu disukai?
+Apakah orang terdekat mengamati ibu lebih mudah menangis saat menghadapi situasi sehari-hari yang kecil?
+33
+Apakah ibu tidur cukup setelah melahirkan?
+Apakah istri Anda pernah menangis tanpa alasan yang jelas setelah melahirkan?
+Apakah orang terdekat memperhatikan ibu mengalami kesulitan berkonsentrasi atau sering lupa setelah melahirkan?
+34
+Apakah ibu pernah berbicara dengan suami mengenai proses adaptasi setelah melahirkan?
+Apakah istri Anda menjadi lebih peka terhadap kritik dari orang lain atau bahkan Anda sendiri?
+Apakah orang terdekat mendengar ibu mengeluh tentang rasa sakit atau ketidaknyamanan fisik yang berkepanjangan?
+35
+Apakah jadwal makan ibu berantakan setelah melahirkan?
+Apakah istri Anda pernah menyampaikan keraguan terhadap kemampuannya sebagai seorang ibu?
+Apakah orang terdekat melihat ibu kesulitan mengambil keputusan sederhana sehari-hari?
+36
+Apakah ibu merasa kesulitan menjalani peran sebagai orang tua baru?
+Apakah istri Anda pernah mengungkapkan perasaan tidak mampu menjalani peran barunya sebagai ibu?
+Apakah orang terdekat merasa ibu menjadi lebih cepat marah atau sensitif dibanding sebelumnya?
+37
+Apakah ibu mengalami perubahan suasana hati setelah melahirkan?
+Apakah istri pernah berkata bahwa ia merasa tidak cukup baik sebagai ibu?
+Apakah orang terdekat mengamati ibu tampak kurang puas atau khawatir berlebihan dengan cara merawat bayinya?
+38
+Apakah ibu merasa kewalahan menjalani peran sebagai orang tua baru?
+Apakah istri Anda sering membandingkan dirinya dengan ibu lain dan merasa kalah atau gagal?
+Apakah orang terdekat memperhatikan ibu merasa cemas berlebihan terkait keselamatan atau kesehatan bayi?
+39
+Apakah ibu cemas tentang kondisi kesehatan dan keselamatan bayi?
+Apakah istri Anda pernah menyatakan penyesalan atau harapan agar dirinya belum memiliki anak sekarang?
+Apakah orang terdekat sering melihat ibu merasa kesepian walaupun ada orang di sekitarnya?
+40
+Apakah ibu sering merasa sedih atau ingin menangis setelah melahirkan?
+Apakah ada orang lain (keluarga/kerabat) yang aktif mendukung proses adaptasi istri menjadi ibu?
+Apakah orang terdekat melihat ibu mengalami kesulitan menyeimbangkan kebutuhan dirinya dan bayi?
+Bobot Gejala
+Setiap gejala memiliki bobot tertentu berdasarkan seberapa kuat gejala tersebut berhubungan dengan baby blues. Jika semua pertanyaan dijawab dengan pilihan "Ya", "Bisa jadi", atau "Tidak", kita bisa mengonversi jawaban tersebut ke dalam sistem penilaian. Berikut adalah cara menyusun penilaian berdasarkan pilihan jawaban dari pertanyaan Bobot Gejala: Setiap gejala memiliki bobot tertentu berdasarkan seberapa kuat gejala tersebut berhubungan dengan baby blues. Jika semua pertanyaan dijawab dengan pilihan "Ya", "Bisa jadi", atau "Tidak", kita bisa mengonversi jawaban tersebut ke dalam sistem penilaian. Berikut adalah cara menyusun penilaian berdasarkan pilihan jawaban dari pertanyaan untuk ibu pasca melahirkan, ayah, dan orang terdekat tersebut:
+Jawaban "Ya":
+Bobot untuk keyakinan terhadap gejala: += 1 (nilai penuh diberikan pada keyakinan gejala berhubungan dengan baby blues).
+Bobot untuk keraguan: += 0 (tidak ada keraguan mengenai hubungan gejala tersebut).
+Jawaban "Bisa Jadi":
+Bobot untuk keyakinan terhadap gejala: += 0.5 (nilai parsial diberikan pada keyakinan gejala berhubungan dengan baby blues).
+Bobot untuk keraguan: += 0.5 (nilai parsial diberikan pada keraguan terhadap gejala tersebut).
+Jawaban "Tidak":
+Bobot untuk keyakinan terhadap gejala: += 0 (tidak ada keyakinan terhadap gejala berhubungan dengan baby blues).
+Bobot untuk keraguan: += 1 (nilai penuh diberikan pada keraguan terhadap gejala tersebut).
+Perhitungan Certainty Factor:
+CF dihitung berdasarkan formula berikut:
+CF[h,e] = MB[h,e] – MD [h,e]
+(3.1)
+Dimana; 
+CF[h,e] = Faktor Kepastian 
+MB[h,e] = MB (Measure of Belief) Nilai yang diberikan berdasarkan bukti yang mendukung bahwa ibu mengalami baby blues (bernilai antara 0 dan 1, di mana 1 menunjukkan keyakinan penuh).
+MD[h,e] = MD (Measure of Disbelief) Nilai yang diberikan berdasarkan bukti yang menunjukkan ketidakpercayaan bahwa ibu mengalami baby blues (bernilai antara 0 dan 1, di mana 1 menunjukkan ketidakpercayaan penuh).
+Klasifikasi Hasil
+Berdasarkan nilai CF, sistem akan mengklasifikasikan kondisi baby blues ibu ke dalam kategori Tidak terjangkit, Ringan, Sedang, atau Berat. Berdasarkan Edinburgh Postnatal Depression Scale (EPDS) yang dikutip dari Cox, 2019, skor EPDS diklasifikasikan ke dalam empat kategori sebagai berikut:
+Tidak ada risiko baby blues: Jika akumulasi nilai EPDS berada pada rentang 0-9.
+Risiko rendah baby blues: Jika akumulasi nilai EPDS berada pada rentang 10-13.
+Risiko sedang baby blues: Jika akumulasi nilai EPDS berada pada rentang 14-19.
+Risiko tinggi baby blues: Jika akumulasi nilai EPDS adalah 20 - 30.
+Klasifikasi ini membantu dalam mengidentifikasi tingkat risiko depresi pascapersalinan dan menentukan perlunya evaluasi lebih lanjut atau intervensi klinis.
+Rekomendasi Penanganan
+Berdasarkan hasil klasifikasi, sistem akan memberikan rekomendasi penanganan yang sesuai untuk membantu ibu agar terhindar dari baby blues.
+Development
+Pada tahap pengembangan sistem rekomendasi baby blues pasca melahirkan menggunakan metode Certainty Factor, teknologi yang digunakan perlu dipilih dengan cermat agar sistem dapat berfungsi optimal serta memenuhi kebutuhan pengguna. Pada pengembangan sistem ini, digunakan Laravel sebagai framework, PHP sebagai bahasa pemrograman, serta Tailwind CSS untuk mendukung desain antarmuka yang minimalis dan responsif. Berikut adalah teknologi yang digunakan beserta spesifikasi perangkat untuk mendukung proses pengembangan.
+3.3.1 Teknologi Pengembangan
+Bahasa Pemrograman dan Framework
+Backend (Laravel Framework): Laravel dipilih sebagai framework utama untuk pengembangan backend. Laravel merupakan salah satu framework PHP yang populer karena menyediakan berbagai fitur seperti routing, middleware, dan ORM (Eloquent) yang memudahkan pengembangan web yang kompleks. Laravel juga memfasilitasi penggunaan algoritma Certainty Factor dalam proses pengambilan keputusan diagnosis baby blues.
+Frontend (PHP & Blade Templating): Laravel memiliki templating engine Blade yang memudahkan pengembangan antarmuka pengguna. Blade memungkinkan pemisahan logika frontend dan backend secara efisien, serta memudahkan pengembangan halaman dinamis berbasis data yang dihasilkan oleh sistem.
+Tailwind CSS: Digunakan untuk mendukung desain antarmuka website. Tailwind CSS adalah utility-first CSS framework yang memungkinkan pengembangan desain halaman yang responsif, cepat, dan ringan. Tailwind memberikan fleksibilitas dalam styling dengan menggunakan kelas-kelas CSS langsung dalam HTML, yang mempercepat proses pengembangan antarmuka.
+Database Management
+Postgres: Digunakan sebagai database relational untuk menyimpan data pengguna, gejala yang dikumpulkan, serta hasil analisis menggunakan metode Certainty Factor. Postgres dipilih karena integrasinya yang baik dengan Laravel serta performanya yang cepat untuk website dengan skala data yang menengah hingga besar.
+Tools Pendukung
+Composer: Digunakan sebagai dependency manager untuk PHP, Composer memudahkan pengelolaan library yang dibutuhkan oleh Laravel selama proses pengembangan.
+NPM (Node Package Manager): Digunakan untuk mengelola package frontend yang terkait dengan Tailwind CSS dan JavaScript. NPM membantu mempercepat pengembangan dengan memfasilitasi instalasi dan pembaruan package frontend secara otomatis.
+Git & GitHub: Version control dengan menggunakan Git sangat penting untuk melacak perubahan kode, memungkinkan kolaborasi tim pengembang secara efisien. Kode akan disimpan dalam repository GitHub untuk memudahkan pengelolaan versi dan kolaborasi antar pengembang.
+3.3.2 Spesifikasi Perangkat
+Dalam rangka memastikan kelancaran pengembangan sistem dan pengoperasian, diperlukan spesifikasi perangkat keras dan perangkat lunak dengan kriteria berikut:
+1. Perangkat Keras:
+Server: Diperlukan server untuk menyimpan dan mengolah data gejala yang dikumpulkan dari pengguna. Spesifikasi minimum:
+Processor: Intel Xeon atau setara
+RAM: 16 GB
+Storage: SSD 512 GB
+Operating System: Linux/Windows 
+Client Device: Pengguna akan mengakses sistem melalui perangkat mobile atau komputer. Perangkat minimal yang mendukung adalah:
+Processor: Dual-Core 1.5 GHz
+RAM: 2 GB
+Browser: Google Chrome, Mozilla Firefox, atau Safari (terbaru)
+Kombinasi teknologi seperti Laravel, PHP, Tailwind CSS, dan Postgres, serta perangkat keras yang memadai, sistem rekomendasi baby blues diharapkan dapat dikembangkan dengan efektif, serta menghasilkan platform yang mudah digunakan oleh para ibu, suami, orang terdekat, dan tenaga ahli seperti psikolog.
+Testing
+Pengujian website deteksi baby blues dilakukan dengan menggunakan metode User Acceptance Testing (UAT). User Acceptance Testing (UAT) akan dilakukan pada sistem rekomendasi baby blues berbasis web untuk memastikan fungsionalitas dan kegunaannya sesuai dengan kebutuhan pengguna, yaitu user dengan role ibu, orang terdekat, suami dan admin yang menggunakan sistem ini. Pengujian ini penting untuk memastikan bahwa setiap fitur yang diimplementasikan berfungsi sesuai dengan tujuan dan harapan.
+Proses UAT
+Persiapan: Proses UAT dimulai dengan mengidentifikasi fitur utama yang akan diuji, seperti input gejala, hasil deteksi, dan rekomendasi penanganan. Proses berikutnya yaitu skenario pengujian (test cases) disiapkan untuk mencakup berbagai fungsionalitas dari website. Kriteria keberhasilan pengujian juga ditentukan berdasarkan hasil yang diharapkan untuk memastikan bahwa fitur berfungsi sesuai tujuan.
+Pelaksanaan: Pengguna akhir, yaitu ibu, suami, dan orang terdekat, dilibatkan untuk menjalankan skenario pengujian yang telah disiapkan. Selama pengujian, umpan balik dari pengguna dikumpulkan terkait pengalaman mereka saat menggunakan sistem. Hasil dari setiap skenario pengujian, baik lulus maupun gagal, dicatat, termasuk catatan perbaikan yang diperlukan.
+Dokumentasi Hasil UAT: Semua hasil pengujian dan umpan balik yang diperoleh didokumentasikan dengan rapi untuk evaluasi lebih lanjut. Jika ditemukan bug atau kekurangan pada sistem, tim pengembang akan melakukan perbaikan sesuai dengan umpan balik yang telah diterima dari pengguna.
+Keputusan Akhir: Hasil UAT yang diperoleh menunjukkan jika sebagian besar skenario berhasil, sistem dapat dinyatakan siap untuk diimplementasikan. Namun, jika terdapat beberapa kekurangan, perbaikan tambahan akan diperlukan sebelum sistem dapat digunakan secara luas.
+Form Penilaian UAT
+Tabel 3.2 Form Penilaian UAT User
+No.
+Skenario
+Langkah-Langkah
+Hasil yang Diharapkan
+Status
+Pengujian Login
+1.
+Login Valid
+Buka halaman login
+Masukkan email terdaftar
+Masukkan password yang benar
+Klik tombol Login
+Berhasil login dan diarahkan ke Dashboard User
+2.
+Email Tidak Valid
+Buka halaman login
+Masukkan email yang tidak terdaftar
+Masukkan password sembarang
+Klik tombol Login
+Menampilkan pesan kesalahan tentang email tidak terdaftar
+3.
+Password Salah
+Buka halaman login
+Masukkan email terdaftar
+Masukkan password yang salah
+Klik tombol Login
+Menampilkan pesan kesalahan tentang password salah
+4.
+Kolom Kosong
+Buka halaman login
+Biarkan kolom email kosong
+Biarkan kolom password kosong
+Klik tombol Login
+Menampilkan peringatan validasi untuk kolom yang wajib diisi
+Pengujian Register
+5.
+Registrasi Berhasil
+Buka halaman registrasi
+Masukkan nama lengkap
+Masukkan email valid
+Pilih peran (ibu/suami/orang terdekat)
+Masukkan password
+Konfirmasi password
+Klik Register
+Akun berhasil dibuat, diarahkan ke halaman Dashboard
+6.
+Password Tidak Cocok
+Buka halaman registrasi
+Masukkan nama lengkap
+Masukkan email
+4. Pilih peran
+Masukkan password
+Masukkan konfirmasi password berbeda
+Klik Register
+Menampilkan kesalahan tentang ketidakcocokan password
+7.
+Email Sudah Terdaftar
+Gunakan email yang sudah ada di sistem
+Isi kolom registrasi lainnya
+Klik Register
+Menampilkan kesalahan tentang email yang sudah ada
+8.
+Registrasi Tidak Lengkap
+Biarkan beberapa kolom wajib kosong
+Klik Register
+Menampilkan peringatan validasi untuk kolom yang wajib diisi
+Pengujian Dashboard
+9.
+Lihat Jumlah Hasil Tes
+Login 
+Navigasi ke Dashboard
+Tampilkan total tes yang dilakukan, Kategorikan hasil (Tidak Terjangkit, Risiko Ringan, Risiko Sedang, Risiko Berat)
+Pengujian Diagnosis
+10.
+Isi Formulir Diagnosis
+Buka Formulir Diagnosis
+Isi tanggal dan Jawab semua pertanyaan
+Kirim jawaban
+Sukses menambahkan diagnosis baru
+11.
+Lihat Riwayat Diagnosis
+Buka Diagnosis
+Periksa tes sebelumnya
+Tampilkan daftar diagnosis sebelumnya dengan detail
+12.
+Hasil Diagnosis
+Pilih salah satu hasil yang ingin kita lihat
+Klik view details
+Tampilkan hasil diagnosis secara detail beserta skor dan kategori risiko
+13.
+Konsultasi
+Pilih salah satu hasil diagnosis
+Klik view details
+Klik icon Whatsapp di pojok kanan bawah
+Berhasil redirect ke whatssapp untuk konsultasi
+Pengujian Berita
+14.
+Lihat Artikel Berita
+Buka bagian Berita
+Klik sebuah artikel
+Tampilkan artikel lengkap dengan semua detail
+Pengujian Profile
+15.
+Lihat Informasi Profile
+Buka halaman Profile
+Tampilkan informasi pengguna dengan akurat
+16.
+Perbarui Profile
+Klik Edit Profile
+Masukkan Nama/Email baru
+Masukkan password saat ini
+Klik Save Change
+Profile berhasil diperbarui
+17.
+Keamanan Pembaruan Profile
+Coba perbarui profile tanpa password
+Cegah perubahan profile tanpa verifikasi password
+Tabel 3.3 Form Penilaian UAT Admin
+No.
+Skenario
+Langkah-Langkah
+Hasil yang Diharapkan
+Status
+Pengujian Login
+1.
+Login Valid
+Buka halaman login
+Masukkan email terdaftar
+Masukkan password yang benar
+Klik tombol Login
+Berhasil login dan diarahkan ke Dashboard Admin
+2.
+Email Tidak Valid
+Buka halaman login
+Masukkan email yang tidak terdaftar
+Masukkan password sembarang
+Klik tombol Login
+Menampilkan pesan kesalahan tentang email tidak terdaftar
+3.
+Password Salah
+Buka halaman login
+Masukkan email terdaftar
+Masukkan password yang salah
+Klik tombol Login
+Menampilkan pesan kesalahan tentang password salah
+4.
+Kolom Kosong
+Buka halaman login
+Biarkan kolom email kosong
+Biarkan kolom password kosong
+Klik tombol Login
+Menampilkan peringatan validasi untuk kolom yang wajib diisi
+Pengujian Dashboard
+5.
+Lihat Jumlah Hasil Tes, Artikel dan akun
+Login 
+Navigasi ke Dashboard
+Tampilkan total tes yang dilakukan, Kategorikan hasil (Tidak Terjangkit, Risiko Ringan, Risiko Sedang, Risiko Berat, total tes, total berita, total user)
+Pengujian Diagnosis
+6.
+Lihat Riwayat Diagnosis
+Buka Diagnosis
+Periksa tes sebelumnya
+Tampilkan semua daftar diagnosis sebelumnya dengan detail
+7.
+Hasil Diagnosis
+Pilih salah satu hasil yang ingin kita lihat
+Klik view details
+Tampilkan semua hasil diagnosis secara detail beserta skor dan kategori risiko
+8.
+Filter Diagnosis
+ Gunakan opsi filter
+Pilih kriteria spesifik
+Tampilkan hasil diagnosis yang difilter
+Pengujian Gejala
+9.
+Tambah Gejala Baru
+Login sebagai admin
+Buka halaman Gejala
+Klik Tambah Gejala Baru
+Isi detail gejala berupa kode, gejala dan kategori
+Klik submit
+Gejala baru berhasil ditambahkan ke sistem
+10.
+Edit Gejala 
+Pilih gejala yang ingin di edit
+Klik edit
+Ubah yang ingin diganti
+Simpan perubahan
+Gejala berhasil diperbarui
+Pengujian Berita
+11.
+Tambah Artikel Berita
+Login sebagai admin
+Buka halaman Berita/News
+Klik Tambah Berita
+Isi detail artikel secara lengkap
+Klik submit
+Artikel berita berhasil dipublikasikan
+12.
+Lihat Artikel Berita
+Buka bagian Berita
+Klik sebuah artikel
+Tampilkan artikel lengkap dengan semua detail
+13.
+Edit Artikel Berita
+Pilih berita yang ingin di edit
+Klik edit
+Ubah bagian yang ingin diganti
+Simpan perubahan
+Artikel berita berhasil diperbarui
+Pengujian User Management
+14.
+Ubah Peran Pengguna
+Login sebagai admin
+Buka User Management
+Pilih seorang pengguna
+Ubah role admin atau user
+Klik Submit atau simpan
+Role pengguna berhasil diperbarui
+15.
+Verifikasi Detail Pengguna
+Lihat daftar pengguna
+Menampilkan Nama, Email, Peran, dan Role dengan benar
+Pengujian Profile
+16.
+Lihat Informasi Profile
+Buka halaman Profile
+Tampilkan informasi akun admin dengan akurat
+17.
+Perbarui Profile
+Klik Edit Profile
+Masukkan Nama/Email baru
+Masukkan password saat ini
+Klik Save Change
+Profile berhasil diperbarui
+18.
+Keamanan Pembaruan Profile
+Coba perbarui profile tanpa password
+Cegah perubahan profile tanpa verifikasi password
+Kriteria Penilaian
+Lulus/Berhasil: Skenario pengujian berhasil dijalankan sesuai dengan harapan.
+Gagal: Skenario pengujian tidak berhasil atau terdapat masalah yang menghambat fungsi sistem.
+Deployment
+Proses deployment website deteksi baby blues ini, akan digunakan layanan hosting dari DomaiNesia dengan nama domain “.my.id”. Pemilihan DomaiNesia didasarkan pada kehandalan layanan hosting yang mendukung framework Laravel serta kemudahan dalam pengelolaan berbasis web.
+Website akan dideploy pada server yang menggunakan paket shared hosting, yang cukup untuk menangani kebutuhan akses publik dari website ini. Domain “.my.id” dipilih karena relevan dengan proyek lokal di Indonesia dan lebih terjangkau bagi pengguna. Dengan domain tersebut, website akan mudah diakses oleh para pengguna, yaitu ibu postpartum, suami, serta orang terdekat, untuk membantu mendeteksi gejala baby blues secara efektif.
+Review
+Review website deteksi baby blues dilakukan dengan menggunakan metode System Usability Scale (SUS). Metode SUS dipilih karena sederhana dan efektif dalam mengevaluasi tingkat kegunaan (usability) website berdasarkan pengalaman pengguna. Review ini dilakukan kepada pengguna akhir, yaitu ibu postpartum, suami, dan orang terdekat, untuk mengukur kepuasan mereka terhadap website.
+3.6.1 System Usability Scale (SUS)
+SUS atau System Usability Scale adalah skala evaluasi kegunaan yang terdiri dari 10 pernyataan, di mana responden diminta untuk memberikan penilaian pada skala 1-5, dengan rincian:
+1: Sangat Tidak Setuju
+2: Tidak Setuju
+3: Netral
+4: Setuju
+5: Sangat Setuju
+3.6.2 Pernyataan System Usability Scale (SUS)
+Berikut adalah tabel yang berisi 10 pernyataan dalam metode SUS yang digunakan untuk mengukur kegunaan website deteksi baby blues: 
+Tabel 3.4 Form Pernyataan SUS
+No
+Pernyataan
+Skala (1-5)
+1.
+Fitur diagnosis baby blues pada website ini sangat membantu saya memahami kondisi psikologis yang saya atau ibu alami.
+2.
+Saya kesulitan memahami istilah-istilah medis yang digunakan dalam proses diagnosis.
+3.
+Proses konsultasi online di website ini terasa mudah dan transparan.
+4.
+Proses diagnosis memakan waktu terlalu lama dan melelahkan.
+5.
+Informasi rekomendasi penanganan baby blues yang diberikan website sangat informatif dan dapat dipahami dengan jelas.
+6.
+Bahasa yang digunakan dalam pertanyaan diagnosis sulit dipahami.
+7.
+Desain website responsif dan mudah diakses melalui berbagai perangkat (smartphone, tablet, komputer).
+8.
+Proses registrasi dan pembuatan akun di website ini sangat sederhana dan tidak membutuhkan waktu lama.
+9.
+Saya memerlukan bantuan teknis eksternal untuk dapat menggunakan seluruh fitur website dengan baik.
+10.
+Website ini menyediakan informasi yang beragam mengenai peran suami, ibu, dan orang terdekat lainnya dalam memberikan dukungan kepada ibu pasca melahirkan.
+3.6.3 Interpretasi Hasil System Usability Scale
+Setelah semua responden memberikan nilai pada setiap pernyataan, skor SUS dihitung dengan langkah-langkah berikut:
+Untuk pernyataan bernomor ganjil, hasil skornya dikurangi 1 dari nilai yang diberikan oleh responden. 
+(3.2)
+Untuk pernyataan bernomor genap, hasil skornya dikurangi nilai yang diberikan dari 5.
+(3.3)
+Jumlahkan seluruh nilai dari langkah 1 dan 2.
+(3.4)
+Kalikan hasilnya dengan 2.5 untuk mendapatkan skor akhir SUS.
+(3.5)
+Jumlahkan seluruh skor yang diperoleh dari setiap responden setelah melewati langkah 1 hingga 3, lalu hitung nilai rata-ratanya.
+(3.6)
+Keterangan: 
+Nilai akhir SUS akan berada dalam rentang 0 hingga 100. Secara umum, skor SUS di atas 68 dianggap menunjukkan tingkat kegunaan yang baik. Berdasarkan skor tersebut, pengembang dapat memutuskan apakah Website memerlukan perbaikan atau sudah cukup memenuhi kebutuhan pengguna. Dengan melakukan proses review secara berkala, pengembang dapat mengidentifikasi dan memperbaiki kekurangan, memastikan Website tetap relevan, mudah digunakan, dan efektif dalam membantu deteksi dini serta manajemen baby blues. Berikut merupakan Skala pada metode System Usability Scale
+≥ 80.3 → Excellent (Sangat Baik) (A) 
+68 - 80.3 → Good (Baik) (B) 
+51 - 68 → OK/Fair (Cukup) (C) 
+≤ 51 → Poor (Buruk) (D/E)
+Rencana Pengujian Sampel
+Rencana pengujian metode Certainty Factor (CF) dilakukan dengan membandingkan hasil perhitungan sistem dan perhitungan manual dalam 15 percobaan, yang dibagi ke dalam tiga kategori peran utama: Ibu (IB), Suami (SU), dan Orang terdekat (OT), masing-masing sebanyak 5 percobaan. Data gejala yang digunakan dalam pengujian dikelompokkan ke dalam empat kategori utama, yaitu Kesejahteraan Emosional, Peran dan Dukungan Keluarga, Kesejahteraan Fisik, serta Hubungan Sosial. Jawaban responden dikategorikan berdasarkan nilai kepastian: "Ya" (MB = +1, MD = +0), "Bisa Jadi" (MB = +0.5, MD = +0.5), dan "Tidak" (MB = +0, MD = +1), di mana MB (Measure of Belief) menunjukkan tingkat kepercayaan terhadap suatu gejala, sedangkan MD (Measure of Disbelief) menunjukkan tingkat ketidakpercayaannya. Setiap percobaan dihitung nilai kepastiannya berdasarkan gejala yang telah ditentukan, kemudian hasil dari sistem dibandingkan dengan hasil perhitungan manual guna menilai tingkat keakuratan metode Certainty Factor dalam sistem yang dikembangkan.
+Tabel 3.5 Sampel Certainty Factor Ibu (IB)
+No.
+Kode
+Sampel 1
+Sampel 2
+Sampel 3
+Sampel 4
+Sampel 5
+1.
+IB001
+Ya
+Bisa Jadi
+Bisa Jadi
+Tidak
+Ya
+2.
+IB002
+Ya
+Tidak
+Ya
+Ya
+Bisa Jadi
+3.
+IB003
+Bisa Jadi
+Ya
+Ya
+Ya
+Bisa Jadi
+4.
+IB004
+Ya
+Ya
+Ya
+Ya
+Bisa Jadi
+5.
+IB005
+Bisa Jadi
+Tidak
+Bisa Jadi
+Ya
+Ya
+6.
+IB006
+Bisa Jadi
+Bisa Jadi
+Tidak
+Ya
+Ya
+7.
+IB007
+Tidak
+Bisa Jadi
+Ya
+Tidak
+Ya
+8.
+IB008
+Tidak
+Ya
+Bisa Jadi
+Ya
+Tidak
+9.
+IB009
+Tidak
+Tidak
+Bisa Jadi
+Ya
+Tidak
+10.
+IB010
+Ya
+Tidak
+Tidak
+Ya
+Tidak
+11.
+IB011
+Tidak
+Ya
+Ya
+Tidak
+Tidak
+12.
+IB012
+Tidak
+Tidak
+Ya
+Tidak
+Ya
+13.
+IB013
+Tidak
+Bisa Jadi
+Tidak
+Ya
+Tidak
+14.
+IB014
+Tidak
+Tidak
+Bisa Jadi
+Ya
+Ya
+15.
+IB015
+Tidak
+Tidak
+Tidak
+Ya
+Ya
+16.
+IB016
+Tidak
+Tidak
+Ya
+Ya
+Bisa Jadi
+17.
+IB017
+Bisa Jadi
+Ya
+Ya
+Tidak
+Ya
+18.
+IB018
+Tidak
+Tidak
+Bisa Jadi
+Ya
+Tidak
+19.
+IB019
+Tidak
+Bisa Jadi
+Tidak
+Tidak
+Ya
+20.
+IB020
+Tidak
+Tidak
+Ya
+Ya
+Bisa Jadi
+21.
+IB021
+Tidak
+Bisa Jadi
+Tidak
+Ya
+Bisa Jadi
+22.
+IB022
+Tidak
+Tidak
+Ya
+Tidak
+Ya
+23.
+IB023
+Tidak
+Bisa Jadi
+Bisa Jadi
+Ya
+Tidak
+24.
+IB024
+Ya
+Tidak
+Ya
+Tidak
+Ya
+25.
+IB025
+Tidak
+Ya
+Ya
+Bisa Jadi
+Ya
+26.
+IB026
+Tidak
+Tidak
+Tidak
+Ya
+Tidak
+27
+IB027
+Bisa Jadi
+Tidak
+Tidak
+Ya
+Tidak
+28.
+IB028
+Tidak
+Ya
+Ya
+Bisa Jadi
+Ya
+29.
+IB029
+Tidak
+Tidak
+Tidak
+Ya
+Tidak
+30.
+IB030
+Ya
+Bisa Jadi
+Tidak
+Ya
+Tidak
+31.
+IB031
+Ya
+Tidak
+Ya
+Tidak
+Ya
+32.
+IB032
+Tidak
+Tidak
+Ya
+Bisa Jadi
+Ya
+33.
+IB033
+Bisa Jadi
+Ya
+Tidak
+Ya
+Tidak
+34.
+IB034
+Tidak
+Tidak
+Tidak
+Ya
+Tidak
+35.
+IB035
+Ya
+Ya
+Bisa Jadi
+Ya
+Bisa Jadi
+36.
+IB036
+Tidak
+Ya
+Bisa Jadi
+Ya
+Bisa Jadi
+37.
+IB037
+Tidak
+Bisa Jadi
+Ya
+Ya
+Tidak
+38.
+IB038
+Bisa Jadi
+Bisa Jadi
+Bisa Jadi
+Ya
+Tidak
+39.
+IB039
+Tidak
+Tidak
+Ya
+Tidak
+Ya
+40.
+IB040
+Tidak
+Tidak
+Ya
+Ya
+Bisa Jadi
+Tabel 3.6 Sampel Certainty Factor Suami (SU)
+No.
+Kode
+Sampel 1
+Sampel 2
+Sampel 3
+Sampel 4
+Sampel 5
+1.
+SU001
+Ya
+Tidak
+Bisa Jadi
+Ya
+Ya
+2.
+SU002
+Tidak
+Ya
+Ya
+Tidak
+Bisa Jadi
+3.
+SU003
+Bisa Jadi
+Tidak
+Ya
+Bisa Jadi
+Ya
+4.
+SU004
+Ya
+Ya
+Bisa Jadi
+Ya
+Ya
+5.
+SU005
+Tidak
+Tidak
+Tidak
+Ya
+Tidak
+6.
+SU006
+Bisa Jadi
+Ya
+Tidak
+Ya
+Ya
+7.
+SU007
+Tidak
+Ya
+Bisa Jadi
+Tidak
+Ya
+8.
+SU008
+Ya
+Tidak
+Ya
+Tidak
+Ya
+9.
+SU009
+Bisa Jadi
+Bisa Jadi
+Tidak
+Ya
+Bisa Jadi
+10.
+SU010
+Tidak
+Tidak
+Ya
+Bisa Jadi
+Ya
+11.
+SU011
+Tidak
+Bisa Jadi
+Bisa Jadi
+Tidak
+Ya
+12.
+SU012
+Ya
+Tidak
+Tidak
+Ya
+Tidak
+13.
+SU013
+Tidak
+Tidak
+Ya
+Ya
+Ya
+14.
+SU014
+Ya
+Tidak
+Tidak
+Ya
+Ya
+15.
+SU015
+Tidak
+Tidak
+Bisa Jadi
+Tidak
+Ya
+16.
+SU016
+Bisa Jadi
+Ya
+Tidak
+Ya
+Ya
+17.
+SU017
+Ya
+Tidak
+Ya
+Tidak
+Bisa Jadi
+18.
+SU018
+Tidak
+Ya
+Bisa Jadi
+Ya
+Bisa Jadi
+19.
+SU019
+Tidak
+Tidak
+Tidak
+Tidak
+Ya
+20.
+SU020
+Bisa Jadi
+Bisa Jadi
+Ya
+Bisa Jadi
+Ya
+21.
+SU021
+Ya
+Tidak
+Ya
+Bisa Jadi
+Ya
+22.
+SU022
+Bisa Jadi
+Tidak
+Tidak
+Ya
+Tidak
+23.
+SU023
+Tidak
+Tidak
+Bisa Jadi
+Tidak
+Ya
+24.
+SU024
+Ya
+Tidak
+Tidak
+Tidak
+Ya
+25.
+SU025
+Tidak
+Tidak
+Ya
+Ya
+Tidak
+26.
+SU026
+Tidak
+Tidak
+Ya
+Tidak
+Ya
+27
+SU027
+Bisa Jadi
+Tidak
+Tidak
+Bisa Jadi
+Tidak
+28.
+SU028
+Tidak
+Ya
+Bisa Jadi
+Ya
+Ya
+29.
+SU029
+Tidak
+Tidak
+Bisa Jadi
+Ya
+Tidak
+30.
+SU030
+Ya
+Bisa Jadi
+Tidak
+Tidak
+Ya
+31.
+SU031
+Bisa Jadi
+Tidak
+Bisa Jadi
+Ya
+Ya
+32.
+SU032
+Ya
+Ya
+Tidak
+Tidak
+Bisa Jadi
+33.
+SU033
+Tidak
+Bisa Jadi
+Bisa Jadi
+Bisa Jadi
+Ya
+34.
+SU034
+Tidak
+Tidak
+Tidak
+Ya
+Ya
+35.
+SU035
+Bisa Jadi
+Ya
+Tidak
+Tidak
+Ya
+36.
+SU036
+Ya
+Tidak
+Tidak
+Tidak
+Ya
+37.
+SU037
+Tidak
+Tidak
+Ya
+Ya
+Tidak
+38.
+SU038
+Tidak
+Ya
+Bisa Jadi
+Tidak
+Ya
+39.
+SU039
+Ya
+Bisa Jadi
+Tidak
+Tidak
+Ya
+40.
+SU040
+Tidak
+Tidak
+Tidak
+Ya
+Ya
+Tabel 3.7 Sampel Certainty Factor Orang Terdekat (OT)
+No.
+Kode
+Sampel 1
+Sampel 2
+Sampel 3
+Sampel 4
+Sampel 5
+1.
+OT001
+Ya
+Bisa Jadi
+Tidak
+Tidak
+Tidak
+2.
+OT002
+Ya
+Tidak
+Bisa Jadi
+Ya
+Tidak
+3.
+OT003
+Bisa Jadi
+Ya
+Ya
+Tidak
+Bisa Jadi
+4.
+OT004
+Ya
+Ya
+Ya
+Ya
+Tidak
+5.
+OT005
+Tidak
+Bisa Jadi
+Tidak
+Tidak
+Ya
+6.
+OT006
+Ya
+Tidak
+Tidak
+Tidak
+Bisa Jadi
+7.
+OT007
+Ya
+Tidak
+Ya
+Tidak
+Tidak
+8.
+OT008
+Ya
+Tidak
+Ya
+Tidak
+Tidak
+9.
+OT009
+Ya
+Bisa Jadi
+Tidak
+Bisa Jadi
+Ya
+10.
+OT010
+Tidak
+Bisa Jadi
+Bisa Jadi
+Tidak
+Tidak
+11.
+OT011
+Ya
+Tidak
+Tidak
+Tidak
+Bisa Jadi
+12.
+OT012
+Ya
+Ya
+Ya
+Tidak
+Ya
+13.
+OT013
+Tidak
+Ya
+Bisa Jadi
+Ya
+Tidak
+14.
+OT014
+Bisa Jadi
+Tidak
+Tidak
+Ya
+Tidak
+15.
+OT015
+Ya
+Tidak
+Tidak
+Bisa Jadi
+Ya
+16.
+OT016
+Ya
+Ya
+Ya
+Ya
+Bisa Jadi
+17.
+OT017
+Bisa Jadi
+Tidak
+Tidak
+Ya
+Ya
+18.
+OT018
+Ya
+Tidak
+Tidak
+Tidak
+Tidak
+19.
+OT019
+Tidak
+Tidak
+Tidak
+Tidak
+Tidak
+20.
+OT020
+Ya
+Bisa Jadi
+Ya
+Bisa Jadi
+Ya
+21.
+OT021
+Bisa Jadi
+Tidak
+Ya
+Ya
+Ya
+22.
+OT022
+Tidak
+Tidak
+Ya
+Tidak
+Bisa Jadi
+23.
+OT023
+Ya
+Bisa Jadi
+Tidak
+Tidak
+Tidak
+24.
+OT024
+Tidak
+Ya
+Bisa Jadi
+Tidak
+Tidak
+25.
+OT025
+Ya
+Ya
+Tidak
+Tidak
+Tidak
+26.
+OT026
+Ya
+Tidak
+Ya
+Ya
+Ya
+27
+OT027
+Ya
+Bisa Jadi
+Bisa Jadi
+Bisa Jadi
+Ya
+28.
+OT028
+Ya
+Ya
+Ya
+Tidak
+Tidak
+29.
+OT029
+Tidak
+Ya
+Tidak
+Tidak
+Bisa Jadi
+30.
+OT030
+Ya
+Tidak
+Bisa Jadi
+Tidak
+Tidak
+31.
+OT031
+Ya
+Tidak
+Ya
+Tidak
+Tidak
+32.
+OT032
+Ya
+Tidak
+Ya
+Ya
+Tidak
+33.
+OT033
+Ya
+Ya
+Tidak
+Tidak
+Ya
+34.
+OT034
+Ya
+Bisa Jadi
+Tidak
+Tidak
+Ya
+35.
+OT035
+Tidak
+Ya
+Ya
+Tidak
+Bisa Jadi
+36.
+OT036
+Ya
+Tidak
+Tidak
+Ya
+Bisa Jadi
+37.
+OT037
+Bisa Jadi
+Tidak
+Ya
+Tidak
+Tidak
+38.
+OT038
+Ya
+Tidak
+Tidak
+Tidak
+Tidak
+39.
+OT039
+Ya
+Ya
+Bisa Jadi
+Bisa Jadi
+Ya
+40.
+OT040
+Ya
+Tidak
+Ya
+Tidak
+Tidak
+Halaman ini sengaja dikosongkan
+BAB IV
+HASIL DAN PEMBAHASAN
+Hasil
+Desain dan antarmuka sistem berperan penting dalam mengintegrasikan sistem yang telah dikembangkan dengan pengalaman pengguna. Antarmuka yang dirancang dengan baik dapat meningkatkan kemudahan dan kenyamanan pengguna dalam mengoperasikan aplikasi. Pembuatan Website Pendeteksi Baby blues, hasil yang dicapai adalah menciptakan platform yang intuitif sehingga memudahkan individu dalam mengakses informasi, melakukan deteksi dini, serta mendapatkan dukungan yang diperlukan terkait sindrom baby blues. Informasi lebih lanjut mengenai platform ini dapat diakses melalui laman: https://byblues.my.id/.
+Halaman Homepage
+Halaman Homepage adalah halaman utama yang pertama kali muncul saat membuka website Byblues. Halaman ini berisi penjelasan singkat dan jelas tentang tujuan utama website, yaitu membantu mendeteksi dini sindrom baby blues serta memberikan informasi dan dukungan bagi ibu pasca melahirkan. Halaman ini tidak hanya berfungsi sebagai pengenalan awal, tetapi juga menyediakan informasi tentang cara penggunaan website untuk deteksi baby blues.
+Gambar 4.1 Halaman Homepage
+Halaman Login
+Halaman Login adalah halaman yang digunakan untuk mengakses akun pengguna di website Byblues. Pada halaman ini, pengguna diminta untuk memasukkan Email dan password yang telah terdaftar.
+Gambar 4.2 Halaman Login
+Halaman Register
+Halaman Registrasi digunakan untuk membuat akun baru di website Byblues. Pada halaman ini, pengguna diminta untuk mengisi beberapa informasi, seperti nama lengkap atau Name, Email, peran apakah sebagai ibu, suami atau orang terdekat, password, dan konfirmasi password.
+Gambar 4.3 Halaman Register
+Halaman Dashboard
+Dashboard User
+Dashboard Byblues memberikan gambaran hasil tes deteksi baby blues yang telah user lakukan. Data yang ditampilkan mencakup total tes yang telah dilakukan dan kategori hasil yang terbagi menjadi empat. 'Tidak Terjangkit' menunjukkan bahwa user tidak mengalami gejala baby blues. 'Risiko Ringan' berarti user memiliki beberapa indikasi awal baby blues yang masih dapat ditangani dengan dukungan emosional dan edukasi. 'Risiko Sedang' menandakan user mengalami tingkat baby blues yang memerlukan perhatian lebih lanjut. Di sisi lain, kategori 'Risiko Berat' menandakan bahwa pengguna mengalami baby blues tingkat tinggi sehingga perlu segera berkonsultasi dengan psikolog atau tenaga profesional. Dashboard ini membantu user memahami kondisi kesehatan mental user berdasarkan hasil tes yang telah dilakukan.
+Gambar 4.4 Halaman Dashboard User
+Dashboard Admin
+Dashboard Byblues menyajikan data analitik komprehensif mengenai hasil tes deteksi baby blues yang telah dilakukan oleh seluruh pengguna platform. Data ini mencakup berbagai informasi penting terkait penggunaan platform. 'Total Cek' menunjukkan jumlah keseluruhan tes yang telah dilakukan. Dari hasil tes tersebut, pengguna dikategorikan ke dalam beberapa tingkat kondisi. 'Tidak Terjangkit' menunjukkan jumlah pengguna yang tidak mengalami baby blues. ‘Risiko Ringan' mencatat pengguna yang menunjukkan tanda-tanda awal baby blues dan masih bisa ditangani dengan dukungan emosional serta edukasi. ‘Risiko Sedang' merepresentasikan pengguna dengan kondisi yang lebih serius dan memerlukan perhatian lebih. Sementara itu, ‘Risiko Berat' menandakan pengguna dengan baby blues tingkat tinggi yang membutuhkan rujukan ke profesional kesehatan mental. Platform ini juga mencatat jumlah pengguna terdaftar dalam kategori 'User'. Terakhir, kategori 'News' mencatat jumlah berita yang telah dibuat dan dipublikasikan di platform. Data ini dapat digunakan untuk memantau tren, mengidentifikasi pola, dan mengoptimalkan layanan dukungan bagi pengguna yang membutuhkan.
+Gambar 4.5 Halaman Dashboard Admin
+Halaman Diagnosis
+Halaman Diagnosis pada website Byblues menampilkan riwayat diagnosis baby blues yang telah dilakukan oleh pengguna. Pada halaman ini, pengguna dapat melihat daftar hasil tes sebelumnya yang mencakup nama, peran (misalnya ibu, suami, atau orang terdekat), hasil diagnosis (tidak terjangkit, risiko ringan, risiko sedang, atau risiko berat), serta tanggal diagnosis.
+Gambar 4.6 Halaman Diagnosis 
+Halaman ini dirancang untuk membantu user mempersiapkan diri secara optimal sebelum mengisi kuisioner diagnosis Baby blues. Proses pengisian kuisioner diperkirakan memerlukan waktu sekitar 10–15 menit, sehingga sangat disarankan agar user meluangkan waktu khusus dalam suasana yang tenang dan bebas dari gangguan. Persiapan ini penting agar setiap pertanyaan dapat dijawab dengan jujur dan penuh konsentrasi, sehingga hasil diagnosis yang diperoleh dapat mencerminkan kondisi secara lebih akurat.
+Gambar 4.7 Halaman Persiapan Diagnosis
+Halaman Form Diagnosis pada website Byblues dirancang untuk membantu pengguna mendeteksi dini sindrom baby blues berdasarkan kondisi yang mereka alami. Form ini mencakup tanggal diagnosis serta serangkaian pertanyaan yang dikelompokkan ke dalam empat aspek utama. Kesejahteraan Emosional menilai tingkat stres, perubahan suasana hati, kecemasan, serta perasaan sedih atau kelelahan mental. Kesejahteraan Fisik berfokus pada kondisi kesehatan pasca melahirkan, seperti tingkat kelelahan, kualitas tidur, dan kesejahteraan tubuh secara keseluruhan. Hubungan Sosial mengukur interaksi ibu dengan lingkungan sekitar, termasuk dukungan dari pasangan, keluarga, dan orang terdekat. Peran dan Dukungan Keluarga mengevaluasi sejauh mana ibu merasa mampu menjalankan perannya serta bagaimana dukungan suami dan orang terdekat dalam menghadapi masa pasca melahirkan. Setiap pertanyaan dalam form ini memiliki tiga pilihan jawaban, yaitu ‘Ya’, ‘Bisa Jadi’, dan ‘Tidak’, yang dapat dipilih pengguna berdasarkan kondisi yang dirasakan sesuai peran masing-masing. 
+Gambar 4.8 Form Diagnosis
+Halaman Hasil Diagnosis
+Proses analisis jawaban dan pemberian hasil oleh sistem dilakukan setelah pengguna mengisi form yang menunjukkan apakah pengguna mengalami baby blues atau tidak, serta rekomendasi langkah yang dapat diambil sesuai tingkat gejala yang terdeteksi. Halaman Hasil Diagnosis pada website Byblues menampilkan ringkasan data pengguna beserta hasil analisis kondisi mereka setelah melakukan diagnosis baby blues. Data pengguna mencakup Nama, Email, dan Peran (misalnya ibu, suami, atau orang terdekat). Bagian Hasil Diagnosis menunjukkan hasil berupa kategori risiko berdasarkan analisis sistem, yaitu ‘Tidak Ada Risiko’, ‘Risiko Rendah’, ‘Risiko Sedang’, atau ‘Risiko Tinggi’ terhadap baby blues. Hasil ini diperoleh melalui perhitungan menggunakan metode Certainty Factor, yang menilai kemungkinan pengguna mengalami baby blues berdasarkan jawaban yang diberikan dalam form diagnosis. Selain hasil diagnosis, halaman ini juga menampilkan skor perhitungan yang menunjukkan tingkat kepastian dari analisis yang dilakukan. Skor tersebut menjadi dasar bagi sistem untuk memberikan rekomendasi penanganan yang sesuai.
+ Gambar 4.9 Halaman Hasil Diagnosis
+Button Konsultasi dengan Psikolog pada website Byblues memungkinkan pengguna terhubung langsung dengan psikolog melalui WhatsApp. Pengguna dapat berkonsultasi mengenai kondisi baby blues dan mendapatkan saran atau dukungan profesional secara cepat dan mudah.
+Gambar 4.10 Button Konsultasi
+Halaman Gejala
+Halaman Gejala pada website Byblues dirancang untuk mengelola berbagai indikasi yang menjadi dasar dalam mendeteksi risiko baby blues pada pengguna. Admin memiliki peran dalam menginput dan memperbarui daftar gejala yang digunakan dalam proses analisis diagnosis. Setiap gejala yang dimasukkan memiliki beberapa atribut utama, seperti Kode Gejala, yang berfungsi sebagai identifikasi unik dalam sistem, serta Keterangan, yang menjelaskan secara detail tentang kondisi yang dialami, seperti perubahan suasana hati yang drastis, kecemasan berlebihan, atau perasaan mudah lelah. Setiap gejala dikategorikan ke dalam beberapa aspek utama, yaitu Kesejahteraan Emosional, Kesejahteraan Fisik, Hubungan Sosial, serta Peran dan Dukungan Keluarga, sehingga sistem dapat menganalisis dengan lebih spesifik faktor yang mempengaruhi kondisi pengguna. Halaman ini juga mencantumkan informasi mengenai Peran, yang menunjukkan kepada siapa gejala tersebut ditujukan, apakah hanya ibu, suami atau orang terdekat. Melalui fitur ini, sistem dapat memberikan hasil diagnosis yang lebih akurat dan sesuai dengan kondisi nyata pengguna, serta memastikan bahwa informasi mengenai baby blues selalu diperbarui dan relevan berdasarkan temuan terbaru.
+Gambar 4.11 Halaman Gejala
+Halaman Form Input Gejala pada website Byblues memungkinkan admin menambahkan atau memperbarui data gejala yang digunakan dalam analisis baby blues. Form ini terdiri dari Kode Gejala, Keterangan dan Kategori. Dengan fitur ini, sistem dapat selalu diperbarui agar hasil diagnosis lebih akurat dan relevan bagi pengguna.
+Gambar 4.12 Input Gejala
+Halaman Berita
+Halaman Berita pada website Byblues menyajikan informasi terbaru seputar baby blues, kesehatan mental ibu, serta tips dan edukasi yang relevan. Setiap berita terdiri dari beberapa elemen utama, yaitu Title sebagai judul berita yang menarik dan menggambarkan isi utama, Content yang berisi informasi lengkap mengenai topik yang dibahas, serta Author yang menunjukkan penulis berita. Selain itu, terdapat Publisher Date yang mencatat tanggal publikasi agar pengguna mengetahui keaktualan informasi. Berita tertentu, disertakan juga Image sebagai pelengkap untuk memperjelas atau memperkuat isi berita. Halaman ini bertujuan untuk memberikan wawasan dan edukasi kepada pengguna agar lebih memahami kondisi baby blues serta cara mengatasinya.
+Gambar 4.13 Halaman Berita
+Halaman Input Berita pada website Byblues memungkinkan admin menambahkan atau memperbarui informasi seputar baby blues dan kesehatan mental ibu. Form input ini terdiri dari beberapa elemen utama, yaitu Title untuk memasukkan judul berita, Content sebagai isi utama yang memuat informasi lengkap, serta Author yang mencatat nama penulis berita. Selain itu, terdapat Publisher Date untuk menentukan tanggal publikasi agar berita tetap relevan. Admin memiliki opsi untuk mengunggah Image bila diperlukan guna memperjelas atau memperkuat isi berita. Dengan fitur ini, website Byblues dapat selalu menyediakan informasi terbaru dan bermanfaat bagi pengguna.
+Gambar 4.14 Input Berita
+Berikut tampilan ketika user melihat berita, Pengguna dapat melihat berita tanpa perlu login.
+Gambar 4.15 View Berita
+Halaman User Management
+Halaman User Management pada website Byblues berfungsi untuk mengelola pengguna dengan atribut Name, Email, Peran, dan Role sebagai User atau Admin. Fitur ini memungkinkan admin untuk mengubah Role pengguna, memastikan pengelolaan akses lebih terstruktur dan sesuai dengan kebutuhan sistem
+Gambar 4.16 Halaman User Management
+Halaman Profile
+Informasi Profile
+Halaman Informasi Profile pada website Byblues menampilkan detail akun yang digunakan, termasuk Name, Email, Peran, dan Role sebagai User atau Admin. Halaman ini memungkinkan pengguna melihat informasi akun mereka dengan jelas dan memastikan data yang tercatat sesuai.
+Gambar 4.17 Halaman Informasi Profile
+Update Profile
+Halaman Update Profile pada website Byblues memungkinkan pengguna memperbarui Name dan Email. Perubahan hanya dapat dilakukan setelah pengguna memasukkan Password untuk verifikasi keamanan. Fitur ini memastikan data tetap aman dan hanya dapat diubah oleh pemilik akun.
+Gambar 4.18 Halaman Update Profile
+Pembahasan
+ERD (Entity Relationship Diagram)
+ERD (Entity Relationship Diagram) ini menggambarkan struktur basis data untuk sebuah aplikasi yang menggabungkan sistem manajemen hak akses berbasis Laravel Permission dan fitur-fitur khusus aplikasi, seperti diagnosis berbasis gejala. Bagian pertama dari ERD terdiri dari tabel-tabel utama Laravel Permission seperti permissions, roles, model_has_permissions, model_has_roles, dan role_has_permissions, yang berfungsi untuk mengatur otorisasi pengguna berdasarkan peran dan hak akses tertentu. Bagian kedua dari ERD berisi tabel-tabel yang mendukung fungsi inti aplikasi, seperti users untuk menyimpan informasi pengguna dan perannya (Ibu, Suami, Orang Terdekat), news untuk menyajikan informasi atau artikel, gejalas untuk menyimpan data gejala berdasarkan kategori kesejahteraan (emosional, fisik, sosial, dan dukungan keluarga), serta diagnosas yang mencatat hasil pemeriksaan berdasarkan gejala yang dialami pengguna. Kombinasi struktur ini memungkinkan aplikasi untuk berjalan secara terstruktur, aman, dan mampu memberikan layanan yang dipersonalisasi sesuai kebutuhan pengguna.
+Gambar 4.19 Entity Relationship Diagram
+Pengujian Certainty Factor
+Pengujian metode Certainty Factor (CF) dilakukan dengan membandingkan lima percobaan hasil perhitungan sistem dengan hasil perhitungan manual yang dilakukan oleh ahli, seperti bidan. Data dalam pengujian ini total 15 data sampel. Jawaban responden diklasifikasikan berdasarkan tingkat kepastian, yaitu "Ya" (MB = +1, MD = +0), "Bisa Jadi" (MB = +0.5, MD = +0.5), dan "Tidak" (MB = +0, MD = +1), di mana MB (Measure of Belief) menunjukkan tingkat kepercayaan terhadap suatu gejala, sementara MD (Measure of Disbelief) menunjukkan tingkat ketidakpercayaan. Pengujian melibatkan tiga peran utama, yaitu ibu (IB), suami (SU), dan orang terdekat (OT). Nilai kepastian dihitung berdasarkan gejala yang telah ditentukan, dan hasilnya dibandingkan dengan perhitungan manual oleh ahli untuk menilai tingkat keakuratan metode Certainty Factor dalam sistem yang dikembangkan.
+Peran Ibu
+Tabel 4.1 Hasil Perhitungan Peran Ibu
+Sampel
+Manual
+Sistem
+Skor
+Klasifikasi
+Skor
+Klasifikasi
+1
+7
+Tidak ada Risiko
+8.625
+Tidak ada Risiko
+2
+10
+Risiko Rendah 
+11.25
+Risiko Rendah 
+3
+18
+Risiko Sedang
+17.25
+Risiko Sedang
+4
+22
+Risiko Tinggi
+21.37
+Risiko Tinggi
+5
+15
+Risiko Sedang
+15.37
+Risiko Sedang
+Peran Suami
+Tabel 4.2 Hasil Perhitungan Peran Suami
+Sampel
+Manual
+Sistem
+Skor
+Klasifikasi
+Skor
+Klasifikasi
+1
+11
+Risiko Rendah
+12.375
+Risiko Rendah
+2
+8
+Tidak ada Risiko
+9.75
+Tidak ada Risiko
+3
+10
+Risiko Rendah
+12.75
+Risiko Rendah
+4
+17
+Risiko Sedang
+15.75
+Risiko Sedang
+5
+24
+Risiko Tinggi
+22.875
+Risiko Tinggi
+Peran Orang Terdekat
+Tabel 4.3 Hasil Perhitungan Peran Orang Terdekat
+Sampel
+Manual
+Sistem
+Skor
+Klasifikasi
+Skor
+Klasifikasi
+1
+22
+Risiko Tinggi
+22.125
+Risiko Tinggi
+2
+10
+Risiko Rendah
+12
+Risiko Rendah
+3
+13
+Risiko Sedang
+14.625
+Risiko Sedang
+4
+7
+Tidak ada Risiko
+9.375
+Tidak ada Risiko
+5
+11
+Risiko Rendah
+12
+Risiko Rendah
+Berdasarkan pengujian Certainty Factor (CF) pada tiga peran (ibu, suami, dan orang terdekat), sistem menunjukkan hasil yang mendekati perhitungan manual ahli. Selisih nilai relatif kecil, seperti pada peran ibu (±1.625), orang terdekat (±2.375), dan suami (±2.75). Secara keseluruhan, pengujian ini menunjukkan bahwa metode Certainty Factor yang diimplementasikan dalam sistem memiliki tingkat keakuratan yang baik dan dapat digunakan sebagai alat bantu yang andal dalam proses pengambilan keputusan berdasarkan gejala yang dimasukkan oleh responden.
+Pengujian System Usability Scale (SUS)
+Tahap evaluasi menerapkan metode System Usability Scale (SUS) guna menilai kemudahan penggunaan aplikasi. Pengujian dilakukan dengan meminta pengguna mengisi kuesioner guna memberikan umpan balik terkait pengalaman dan kepuasan mereka saat menggunakan aplikasi Byblues. Dari total 100 responden yang berpartisipasi, sebanyak 34 responden memiliki peran sebagai ibu, 33 responden merupakan peran suami, dan 33 responden adalah berperan orang terdekat. Hasil pengujian ini memberikan gambaran mengenai pengalaman pengguna, yang selanjutnya akan dianalisis untuk menilai tingkat usability berdasarkan rata-rata skor SUS.
+(4.1)
+Hasil pengujian SUS yang dilakukan terhadap 100 responden menunjukkan seperti yang terlihat pada lampiran 1, diperoleh skor rata-rata sebesar 70.8. Berdasarkan skala SUS, skor tersebut termasuk dalam kategori Good (baik) dalam hal efektivitas, efisiensi, dan kepuasan pengguna.
+Pengujian User Acceptance Testing (UAT)
+Tahap pengujian aplikasi dilakukan dengan menerapkan metode User Acceptance Testing (UAT) untuk memastikan bahwa aplikasi layak digunakan sebelum resmi diluncurkan. Pengujian ini mengacu pada sejumlah skenario yang telah disusun sebelumnya dan dicatat dalam formulir evaluasi, yang bertujuan untuk menilai apakah hasil dan perilaku aplikasi sesuai dengan harapan pengguna. UAT dilaksanakan pada dua role utama, yaitu admin dan user. Untuk role user, pengujian melibatkan tiga peran berbeda, yaitu ibu, suami, dan orang terdekat, yang masing-masing menjalani 5 skenario pengujian, sehingga total terdapat 15 pengujian dari sisi user. Sementara itu, role admin juga melakukan 5 skenario pengujian, sehingga secara keseluruhan terdapat 20 pengujian UAT yang dilakukan. Berdasarkan hasil yang diperoleh, seluruh skenario dari masing-masing role dinyatakan lolos atau berhasil, tanpa ditemukan kendala yang menghambat fungsi aplikasi. Hasil ini menunjukkan bahwa aplikasi telah memenuhi standar dari segi fungsi, kenyamanan penggunaan, serta kesesuaian dengan kebutuhan pengguna, baik dari sisi user maupun admin.
+BAB VKESIMPULAN
+Kesimpulan
+Berdasarkan penelitian yang telah dilakukan serta pembahasan pada bab sebelumnya, diperoleh beberapa kesimpulan sebagai berikut:
+Sistem rekomendasi Baby blues berbasis Web dengan metode Certainty Factor telah berhasil dibangun dan dapat berjalan dalam aplikasi browser. Sistem ini mampu mengidentifikasi tingkat risiko baby blues berdasarkan gejala yang dirasakan oleh pengguna, yang dikategorikan ke dalam empat tingkat risiko yaitu tidak terjangkit, risiko rendah, risiko sedang, dan risiko berat. Selain itu, sistem ini dirancang untuk digunakan oleh tiga peran pengguna, yaitu ibu, suami, dan orang terdekat, sehingga dapat memberikan dukungan yang lebih komprehensif dalam deteksi dan pencegahan baby blues.
+Sistem rekomendasi dengan metode Certainty Factor menunjukkan tingkat akurasi yang baik, dengan selisih hasil yang kecil dibanding perhitungan manual ahli, yaitu ±1.625 untuk ibu, ±2.375 untuk orang terdekat, dan ±2.75 untuk suami. Hal ini membuktikan bahwa sistem dapat diandalkan sebagai alat bantu dalam mendeteksi gejala baby blues berdasarkan data gejala dari pengguna.
+Sistem ini mampu memberikan solusi rekomendasi berupa saran pencegahan dan penanganan awal bagi ibu pasca melahirkan yang mengalami gejala baby blues, termasuk informasi mengenai dukungan dan konsultasi dengan tenaga ahli seperti psikolog.
+Hasil pengujian sistem untuk mengevaluasi kegunaan platform deteksi Baby blues menggunakan metode System Usability Scale (SUS) menunjukkan skor rata-rata sebesar 71.2, yang termasuk dalam kategori Good (baik).
+Saran
+Berdasarkan hasil penelitian yang telah dilakukan, terdapat beberapa rekomendasi yang dapat dijadikan pertimbangan bagi penelitian berikutnya, antara lain:
+Pengembangan sistem berbasis mobile atau android untuk mempermudah pengguna dalam mengakses sistem kapan saja dan di mana saja.
+Diperlukan sosialisasi dan edukasi lebih luas agar ibu pasca melahirkan dan keluarganya lebih sadar akan pentingnya deteksi dini baby blues serta langkah-langkah yang bisa dilakukan untuk mengatasinya.
+DAFTAR PUSTAKA
+Alamsyah, M. R., & Kurniawan, H. (2021). Sistem Pakar Menggunakan Metode Certainty Factor untuk Mendiagnosa Hama dan Penyakit pada Tanaman Cabai. Jurnal Teknologi Informasi, 16(2), 38–45.
+Al-Rabaiah, H. A., & Medina-Medina, N. (2021). Agile beeswax: Mobile app development process and empirical study in real environment. Sustainability (Switzerland), 13(4), 1–34. https://doi.org/10.3390/su13041909
+Anggraini, S., Saragih, R., & Khair, H. (2023). Expert System To Determine Psychological Disorders In Chronic Kidney Failure (CKD) Patients Undergoing Hemodialysis Therapy Using Certainty Factor Method. Journal of Artificial Intelligence and Engineering Applications, 3(1), 2808–4519. https://ioinformatic.org/
+Ardiansyah, R. (2023). Analysis and Application of the Certainty Factor Method in the Diagnostic Expert System for Broiler Chicken Diseases. Journal of Computer Scine and Information Technology, 66–71. https://doi.org/10.35134/jcsitech.v9i2.65
+Atiqoh, S., & Erye Frety, E. (2023). Acupressure for Postpartum Blues: A Literatur Review. International Journal of Research Publications, 137(1). https://doi.org/10.47119/ijrp10013711120235673
+Dini Destiani Siti Fatimah, Yosep Septiana, & Gilang Ramadhan. (2022). Rancang Bangun Aplikasi Sistem Pakar Diagnosa Penyakit Stunting Berbasis Web  Menggunakan Metode Certainty Factor. Jurnal Algoritma , 19(2), 547–557.
+Ekadewi Retnosari, & Siti Fatimah. (2022). Prevalence And Factors That Contributing of Baby Blues Syndrome On Postpartum Mothers. International Journal Scientific and Professional (IJ-ChiProf), 1(2), 64–70. https://doi.org/10.56988/chiprof.v1i2.10
+Farrel Muhammad Iqbal Yufi, & Luvia Friska Narulita. (2023). PERANCANGAN SISTEM PAKAR DIAGNOSA POSTPARTUM  DEPRESSION MENGGUNAKAN METODE CERTAINTY FACTOR  BERBASIS WEB. Prosiding Senakama, 2.
+Fonda, H., Yulanda, Ikhsanudin, M., Muhardi, & Irawan, Y. (2021). Application of Certainty Factor Method to Identify Pests in Crystal Jamboo Plants. Journal of Physics: Conference Series, 1783(1). https://doi.org/10.1088/1742-6596/1783/1/012053
+Gangka, N. A. T., Widyastuti, & Cahyaningrum, K. (2024). Pengaruh intervensi Mindfulness-Based Stress Reduction (MBSR) terhadap kecenderungan baby blues pada ibu postpartum. Procedia : Studi Kasus Dan Intervensi Psikologi, 12(1), 14–21. https://doi.org/10.22219/procedia.v12i1.31620
+Halima, S., Supriyadi, S., & Deniati, E. N. (2022). Dukungan Sosial Terhadap Kejadian Baby Blues di Wilayah Kerja Puskesmas Krejengan Kabupaten Probolinggo. Sport Science and Health, 4(3), 219–228. https://doi.org/10.17977/um062v4i32022p219-228
+Karuniawan, P., Farida, I. N., Suhertian, J. (2021). IMPLEMENTASI METODE CERTAINTY FACTOR UNTUK MENGIDENTIFIKASI PENYAKIT TANAMAN KEDELAI DAN PADI. In Jurnal NOE (Vol. 4, Issue 01). https://ojs.unpkediri.ac.id/index.php/noe
+Khairunnisa, F. S., & Abdullah, M. N. A. (2022). DAMPAK PERNIKAHAN DINI TERHADAP POTENSI BABY BLUES SYNDROM PADA IBU MUDA DI KABUPATEN BANDUNG. SOSIO EDUKASI Jurnal Studi Masyarakat Dan Pendidikan, 6(1), 63–73. https://doi.org/10.29408/sosedu.v6i1.15101
+Marbun, E., Erwansyah, K., & Hutagalung, J. (2022). Sistem Pakar Mendiagnosa Penyakit Kolesterol Pada Remaja Menggunakan Metode Certainty Factor. JURNAL SISTEM INFORMASI TGD, 4, 549–556. https://ojs.trigunadharma.ac.id/index.php/jsi
+Maulina, D., & Wulanningsih, A. M. (2020). METODE CERTAINTY FACTOR DALAM PENERAPAN SISTEM PAKAR DIAGNOSA PENYAKIT ANAK. JOISM : JURNAL OF INFORMATION SYSTEM MANAGEMENT, 1(2), 23–32.
+Namirah, Purnamaniswaty Yunus, Azizah Nurdin, Najamuddin, & M Galib. (2023). Factors Influencing the Occurrence of Baby Blues Syndrome in Postpartum Mothers. JURNAL KEDOKTERAN, 8(2), 54–63. https://doi.org/10.36679/kedokteran.v8i2.10
+Palyama, D. G., & Tomasila, G. (2022). An Important Aspect of Satisfaction on Mobile Apps: An Usability Evaluation Based on Gender. JINAV: Journal of Information and Visualization, 3(1), 93–98. https://doi.org/10.35877/454ri.jinav1568
+Pillai, N. S. R., & Hemamalini, R. R. (2022). Hybrid User Acceptance Test Procedure to Improve the Software Quality. International Arab Journal of Information Technology, 19(6), 956–964. https://doi.org/10.34028/iajit/19/6/14
+Pratiwi, K., Diii, P., Sekolah, K., Ilmu, T., & Akbidyo, K. (2023). Pemanfaatan Instrumen EPDS untuk Mengetahui Kejadian Baby Blues Syndrome Berdasarkan Kondisi Sosial dan Demografi di Indonesia (Utilization of The EPDS Instrument to Know the Events of Baby Blues Syndrome Based on Social and Demography Conditions in Indonesia). In Jurnal Kesehatan (Vol. 12, Issue 1).
+Purwanti, C., & Said, M. (2024). licensed under a Creative Commons Attribution 4.0 International License Publish: Association of Indonesian Teachers and. Lecturers International Journal of Health Sciences (IJHS, 2(3). https://doi.org/10.59585/ijhs
+Putri, L. F. (2020). Perancangan Aplikasi Sistem Pakar Penyakit Roseola Dengan Menggunakan Metode Certainty Factor. Jurnal Sistem Komputer Dan Informatika (JSON), 1(2), 107. https://doi.org/10.30865/json.v1i2.1956
+Rahmawati, R., Purnamasari, N. I., & Junuda, J. (2023). Determinant analysis of baby blues syndrome. International Journal of Reproduction, Contraception, Obstetrics and Gynecology, 13(1), 36–40. https://doi.org/10.18203/2320-1770.ijrcog20234076
+Saqib, K., Khan, A. F., & Butt, Z. A. (2021). Machine learning methods for predicting postpartum depression: Scoping review. In JMIR Mental Health (Vol. 8, Issue 11). JMIR Publications Inc. https://doi.org/10.2196/29838
+Sri Dewi Tiara Rahmi, & Diah Indriani. (2023). Husband’s support on the incidence of baby blues in mothers: A literature review study. World Journal of Advanced Research and Reviews, 21(2), 461–464. https://doi.org/10.30574/wjarr.2024.21.2.0416
+Utami, F. P., & Nurfita, D. (2022). Postpartum blues reviewed by the risk factors in Indonesia. Journal of Ideas in Health, 5(4). https://doi.org/10.47108/jidhealth.vol5.iss4.258
+Veldasari, N., Fadli, A., Wardhana, A. W., & Aliim, M. S. (2022). Analisis Perbandingan Metode Certainty Factor, Dempster Shafer dan Teorema Bayes dalam Deteksi Dini Gangguan Kesehatan Mental. Jurnal Pendidikan Dan Teknologi Indonesia, 2(7), 329–339. https://doi.org/10.52436/1.jpti.191
+Wahyudi Bangun, A., Erwansyah, K., & Elfitriani. (2022). Sistem Pakar Mendiagnosa Penyakit Mastitis Menggunakan Metode Certainty Factor. Jurnal Sistem Informasi TGD, 1, 80–89. https://ojs.trigunadharma.ac.id/index.php/jsi
+Wahyuni, N. W. E., Yuni Rahyani, N. K., & Senjaya, A. A. (2023). Karakteristik Ibu Postpartum dengan Baby Blues Syndrome. Jurnal Ilmiah Kebidanan (The Journal Of Midwifery), 11(1), 114–120. https://doi.org/10.33992/jik.v11i1.2440
+Wellina BR Sebayang, Ravika Dewi, & Feni Hati Halawa. (2024). GAMBARAN KEJADIAN BABY BLUES PADA IBU  POSTPARTUM DI KOTA MEDAN. JURNAL ILMIAH KEBIDANAN IMELDA, 10(1), 35–38. https://doi.org/10.36685/phi.v5i4.312
+Yunike. (2023). Postpartum Depression: The Forgotten Mother Experience. Jurnal Penelitian Pendidikan IPA, 9(7), 293–301. https://doi.org/10.29303/jppipa.v9i7.3944
+LAMPIRAN
+Lampiran 1. Tabel Hasil System Usability Scale
+Responden
+Peran
+Q1
+Q2
+Q3
+Q4
+Q5
+Q6
+Q7
+Q8
+Q9
+Q10
+Total
+Resp 1
+Suami
+5
+2
+5
+2
+5
+2
+5
+4
+5
+1
+85
+Resp 2
+Suami
+5
+1
+5
+1
+5
+1
+5
+4
+5
+1
+92,5
+Resp 3
+Orang Terdekat
+4
+2
+3
+3
+4
+3
+3
+3
+3
+3
+57,5
+Resp 4
+Suami
+5
+3
+5
+3
+5
+3
+5
+3
+5
+3
+75
+Resp 5
+Suami
+5
+1
+4
+1
+5
+2
+5
+4
+5
+2
+85
+Resp 6
+Suami
+4
+2
+5
+2
+4
+2
+5
+3
+5
+2
+80
+Resp 7
+Ibu
+5
+2
+4
+1
+4
+2
+5
+4
+4
+1
+80
+Resp 8
+Suami
+5
+1
+4
+2
+5
+1
+5
+4
+5
+1
+87,5
+Resp 9
+Ibu
+5
+2
+4
+1
+4
+2
+5
+4
+4
+1
+80
+Resp 10
+Suami
+5
+1
+4
+1
+4
+1
+5
+3
+5
+2
+87,5
+Resp 11
+Suami
+5
+2
+5
+2
+4
+2
+5
+4
+5
+1
+82,5
+Resp 12
+Suami
+5
+2
+5
+1
+5
+2
+5
+4
+5
+2
+85
+Resp 13
+Ibu
+3
+4
+3
+3
+5
+3
+4
+3
+5
+3
+60
+Resp 14
+Ibu
+4
+3
+5
+2
+5
+3
+5
+3
+5
+1
+80
+Resp 15
+Orang Terdekat
+5
+2
+5
+2
+5
+2
+5
+3
+4
+2
+82,5
+Resp 16
+Ibu
+5
+2
+5
+3
+5
+2
+5
+4
+5
+4
+75
+Resp 17
+Suami
+5
+1
+5
+1
+5
+1
+5
+4
+5
+1
+92,5
+Resp 18
+Ibu
+4
+3
+4
+3
+5
+2
+5
+4
+5
+3
+70
+Resp 19
+Ibu
+5
+3
+4
+3
+3
+3
+4
+2
+5
+3
+67,5
+Resp 20
+Orang Terdekat
+4
+2
+4
+2
+3
+4
+5
+3
+5
+4
+65
+Resp 21
+Ibu
+5
+1
+5
+1
+5
+1
+5
+3
+5
+1
+95
+Resp 22
+Orang Terdekat
+5
+2
+3
+2
+4
+3
+4
+4
+4
+4
+62,5
+Resp 23
+Suami
+4
+3
+5
+2
+5
+2
+5
+4
+4
+1
+77,5
+Resp 24
+Orang Terdekat
+4
+3
+5
+3
+4
+3
+5
+3
+4
+3
+67,5
+Resp 25
+Orang Terdekat
+5
+1
+4
+2
+4
+2
+5
+4
+5
+1
+82,5
+Resp 26
+Ibu
+4
+2
+4
+2
+4
+2
+4
+4
+4
+2
+70
+Resp 27
+Orang Terdekat
+4
+3
+4
+1
+4
+2
+4
+4
+4
+2
+70
+Resp 28
+Ibu
+5
+1
+5
+1
+5
+1
+5
+3
+5
+3
+90
+Resp 29
+Suami
+4
+2
+4
+2
+4
+1
+4
+4
+4
+1
+75
+Resp 30
+Orang Terdekat
+4
+1
+5
+3
+5
+2
+4
+4
+5
+1
+80
+Resp 31
+Orang Terdekat
+5
+1
+3
+4
+5
+1
+5
+4
+5
+1
+80
+Resp 32
+Ibu
+5
+1
+5
+2
+4
+1
+4
+4
+1
+5
+65
+Resp 33
+Ibu
+4
+1
+5
+2
+4
+2
+5
+4
+1
+5
+62,5
+Resp 34
+Orang Terdekat
+5
+1
+5
+2
+4
+2
+4
+3
+4
+2
+80
+Resp 35
+Suami
+3
+2
+4
+2
+4
+2
+5
+4
+2
+4
+60
+Responden
+Peran
+Q1
+Q2
+Q3
+Q4
+Q5
+Q6
+Q7
+Q8
+Q9
+Q10
+Total
+Resp 36
+Suami
+5
+4
+4
+1
+5
+1
+5
+5
+2
+1
+72,5
+Resp 37
+Suami
+4
+2
+4
+1
+5
+2
+5
+3
+2
+2
+75
+Resp 38
+Orang Terdekat
+5
+2
+3
+1
+3
+2
+4
+2
+1
+4
+62,5
+Resp 39
+Orang Terdekat
+4
+1
+3
+1
+4
+2
+4
+4
+1
+4
+60
+Resp 40
+Ibu
+4
+1
+4
+2
+4
+2
+5
+3
+1
+3
+67,5
+Resp 41
+Orang Terdekat
+4
+4
+5
+3
+5
+3
+5
+3
+1
+4
+57,5
+Resp 42
+Suami
+5
+2
+4
+1
+4
+1
+5
+4
+2
+2
+75
+Resp 43
+Orang Terdekat
+5
+1
+5
+2
+4
+2
+4
+4
+1
+5
+62,5
+Resp 44
+Orang Terdekat
+3
+3
+3
+3
+3
+3
+4
+4
+3
+4
+47,5
+Resp 45
+Suami
+4
+2
+4
+3
+3
+3
+3
+3
+5
+3
+62,5
+Resp 46
+Suami
+4
+2
+4
+2
+4
+2
+4
+4
+4
+2
+70
+Resp 47
+Ibu
+5
+3
+5
+1
+5
+2
+4
+4
+2
+4
+67,5
+Resp 48
+Ibu
+4
+3
+4
+2
+4
+3
+5
+4
+4
+3
+65
+Resp 49
+Orang Terdekat
+5
+3
+5
+3
+5
+2
+5
+3
+1
+3
+67,5
+Resp 50
+Orang Terdekat
+5
+2
+4
+2
+4
+4
+5
+4
+2
+4
+60
+Resp 51
+Ibu
+4
+1
+5
+2
+4
+2
+4
+4
+2
+3
+67,5
+Resp 52
+Suami
+4
+1
+5
+3
+4
+2
+4
+4
+2
+3
+65
+Resp 53
+Orang Terdekat
+5
+1
+5
+2
+5
+1
+5
+3
+2
+1
+85
+Resp 54
+Orang Terdekat
+5
+1
+5
+3
+5
+2
+5
+4
+2
+1
+77,5
+Resp 55
+Orang Terdekat
+4
+2
+4
+2
+5
+3
+4
+4
+2
+3
+62,5
+Resp 56
+Suami
+4
+1
+5
+3
+4
+2
+5
+3
+2
+1
+75
+Resp 57
+Orang Terdekat
+5
+2
+5
+2
+5
+1
+5
+3
+1
+2
+77,5
+Resp 58
+Ibu
+5
+2
+5
+3
+5
+1
+5
+3
+2
+1
+80
+Resp 59
+Orang Terdekat
+5
+1
+4
+3
+4
+1
+3
+4
+2
+5
+60
+Resp 60
+Orang Terdekat
+4
+1
+4
+2
+5
+3
+5
+3
+2
+3
+70
+Resp 61
+Orang Terdekat
+5
+2
+4
+2
+5
+1
+4
+3
+3
+1
+80
+Resp 62
+Ibu
+5
+1
+5
+2
+5
+2
+5
+4
+2
+3
+75
+Resp 63
+Orang Terdekat
+5
+2
+5
+2
+4
+2
+5
+4
+2
+2
+72,5
+Resp 64
+Suami
+5
+3
+3
+3
+5
+2
+5
+4
+2
+3
+62,5
+Resp 65
+Ibu
+5
+1
+5
+2
+4
+2
+5
+3
+2
+2
+77,5
+Resp 66
+Ibu
+4
+1
+5
+2
+4
+2
+4
+4
+1
+5
+60
+Resp 67
+Ibu
+4
+3
+4
+2
+4
+2
+5
+3
+2
+4
+62,5
+Resp 68
+Orang Terdekat
+5
+2
+4
+1
+5
+2
+4
+3
+2
+4
+70
+Resp 69
+Suami
+4
+2
+4
+2
+5
+1
+5
+3
+4
+1
+82,5
+Resp 70
+Orang Terdekat
+5
+1
+5
+2
+4
+1
+5
+3
+2
+1
+82,5
+Resp 71
+Suami
+5
+2
+4
+2
+5
+2
+5
+3
+2
+4
+70
+Resp 72
+Suami
+5
+2
+4
+2
+4
+2
+5
+3
+2
+4
+67,5
+Resp 73
+Orang Terdekat
+5
+2
+5
+1
+5
+2
+4
+4
+2
+5
+67,5
+Resp 74
+Orang Terdekat
+4
+3
+4
+3
+5
+2
+4
+3
+3
+5
+60
+Resp 75
+Orang Terdekat
+5
+2
+5
+2
+5
+2
+5
+3
+1
+5
+67,5
+Resp 76
+Orang Terdekat
+3
+2
+4
+2
+4
+2
+3
+4
+2
+3
+57,5
+Resp 77
+Orang Terdekat
+4
+1
+5
+2
+5
+3
+5
+4
+2
+4
+67,5
+Resp 78
+Ibu
+5
+2
+4
+2
+5
+1
+4
+4
+2
+5
+65
+Resp 79
+Orang Terdekat
+4
+2
+5
+2
+5
+3
+5
+3
+1
+5
+62,5
+Resp 80
+Ibu
+5
+2
+5
+1
+5
+2
+4
+4
+2
+5
+67,5
+Resp 81
+Suami
+5
+1
+5
+3
+4
+2
+4
+4
+2
+5
+62,5
+Resp 82
+Ibu
+5
+2
+5
+1
+5
+1
+4
+3
+1
+5
+70
+Resp 83
+Ibu
+5
+1
+5
+2
+5
+5
+5
+3
+1
+5
+62,5
+Resp 84
+Ibu
+5
+1
+5
+1
+5
+1
+5
+3
+1
+5
+75
+Resp 85
+Suami
+5
+2
+5
+2
+5
+2
+5
+1
+2
+5
+75
+Resp 86
+Ibu
+4
+2
+5
+2
+4
+1
+5
+3
+2
+5
+67,5
+Resp 87
+Ibu
+5
+2
+4
+1
+4
+2
+3
+4
+2
+4
+62,5
+Resp 88
+Suami
+4
+2
+5
+2
+5
+1
+4
+4
+2
+4
+67,5
+Resp 89
+Suami
+5
+2
+4
+1
+4
+2
+4
+4
+2
+5
+62,5
+Resp 90
+Ibu
+5
+2
+5
+2
+5
+1
+3
+4
+2
+4
+67,5
+Resp 91
+Ibu
+4
+2
+5
+1
+5
+2
+3
+4
+2
+4
+65
+Resp 92
+Suami
+4
+1
+5
+2
+4
+1
+5
+4
+1
+4
+67,5
+Resp 93
+Suami
+4
+2
+4
+2
+4
+2
+5
+4
+2
+4
+62,5
+Resp 94
+Suami
+4
+1
+5
+2
+4
+2
+4
+4
+2
+4
+65
+Resp 95
+Suami
+4
+2
+5
+2
+5
+2
+5
+3
+2
+5
+67,5
+Resp 96
+Suami
+5
+2
+4
+1
+5
+2
+4
+3
+2
+4
+70
+Resp 97
+Ibu
+5
+2
+4
+1
+5
+2
+3
+4
+2
+4
+65
+Resp 98
+Ibu
+4
+2
+5
+1
+4
+2
+3
+4
+2
+4
+62,5
+Resp 99
+Ibu
+4
+2
+5
+2
+5
+2
+3
+4
+2
+4
+62,5
+Resp 100
+Ibu
+5
+2
+4
+2
+5
+2
+4
+4
+2
+5
+62,5
+Total Rata-Rata
+70,8
+Lampiran 2. Hasil UAT Admin
+UAT Admin 1
+UAT Admin 2
+UAT Admin 3
+UAT Admin 4
+UAT Admin 5
+Lampiran 3. Hasil UAT User (Ibu)
+UAT Ibu 1
+UAT Ibu 2
+UAT Ibu 3
+UAT Ibu 4
+UAT Ibu 5
+Lampiran 4. Hasil UAT User (Suami)
+UAT Suami 1
+UAT Suami 2
+UAT Suami 3
+UAT Suami 4
+UAT Suami 5
+Lampiran 5. Hasil UAT User (Orang Terdekat)
+UAT Orang Terdekat 1
+UAT Orang Terdekat 2
+UAT Orang Terdekat 3
+UAT Orang Terdekat 4
+UAT Orang Terdekat 5
+Lampiran 6. Hasil Perhitungan Manual Peran Ibu
+Sampel 1
+Sampel 2
+Sampel 3
+Sampel 4
+Sampel 5
+Lampiran 7. Hasil Perhitungan Manual Peran Suami
+Sampel 1
+Sampel 2
+Sampel 3
+Sampel 4
+Sampel 5
+Lampiran 8. Hasil Perhitungan Manual Peran Orang Terdekat
+Sampel 1
+Sampel 2
+Sampel 3
+Sampel 4
+Sampel 5
+Lampiran 9. Biodata Narasumber Psikolog
+ 
+Lampiran 10. Biodata Narasumber Bidan
+Lampiran 11. Hasil Turnitin
