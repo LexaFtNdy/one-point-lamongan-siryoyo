@@ -1,6 +1,7 @@
 <script setup>
 import { Head, Link, useForm } from '@inertiajs/vue3';
 import { ref, computed, onMounted } from 'vue';
+import gsap from 'gsap';
 import { PhUser, PhStar, PhCurrencyCircleDollar, PhArrowRight, PhFaders, PhCalendarCheck, PhX } from '@phosphor-icons/vue';
 import MemberLayout from '@/Layouts/MemberLayout.vue';
 
@@ -74,10 +75,11 @@ const dateOptions = computed(() => {
     return options;
 });
 
-// Simple staggered entry animation setup
-const showItems = ref(false);
 onMounted(() => {
-    setTimeout(() => { showItems.value = true; }, 100);
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+    tl.from('.header-anim', { y: -20, opacity: 0, duration: 0.6 })
+      .from('.trainer-card', { y: 40, opacity: 0, duration: 0.6, stagger: 0.1 }, '-=0.3');
 });
 </script>
 
@@ -87,7 +89,7 @@ onMounted(() => {
     <div class="space-y-8 pb-10">
         
         <!-- Premium Header Section -->
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-white/5">
+        <div class="header-anim flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-white/5">
             <div>
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gym-yellow/10 border border-gym-yellow/20 mb-3 backdrop-blur-md">
                     <PhStar weight="fill" class="text-gym-yellow" />
@@ -112,10 +114,8 @@ onMounted(() => {
             <div 
                 v-for="(trainer, index) in exact_matches" 
                 :key="trainer.id"
-                :class="['relative overflow-hidden bg-[#121212]/60 backdrop-blur-xl border border-white/5 rounded-[2rem] p-8 transition-all duration-500 group transform hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] hover:border-white/10 flex flex-col h-full opacity-0 translate-y-8', showItems ? 'opacity-100 translate-y-0' : '']"
-                :style="{ transitionDelay: `${index * 100}ms` }"
+                class="trainer-card relative overflow-hidden bg-[#121212]/60 backdrop-blur-xl border border-white/5 rounded-[2rem] p-8 transition-all duration-500 group transform hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] hover:border-white/10 flex flex-col h-full"
             >
-                <!-- Subtle Gradient Hover Effect inside card -->
                 <div class="absolute top-0 right-0 w-48 h-48 bg-gym-red/5 rounded-full blur-[60px] group-hover:bg-gym-red/15 transition-colors duration-700 pointer-events-none"></div>
 
                 <div class="relative z-10 flex flex-col h-full">

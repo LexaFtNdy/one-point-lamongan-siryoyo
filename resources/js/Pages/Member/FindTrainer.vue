@@ -1,5 +1,6 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+import gsap from 'gsap';
 import { Head, useForm } from '@inertiajs/vue3';
 import { 
     PhArrowRight, PhMinus, PhPlus, 
@@ -34,6 +35,14 @@ const formatRupiah = (number) => {
 const submit = () => {
     form.post(route('member.find-pt.results'));
 };
+
+onMounted(() => {
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+    tl.from('.header-anim', { y: -30, opacity: 0, duration: 0.8 })
+      .from('.question-section', { y: 40, opacity: 0, duration: 0.6, stagger: 0.15 }, '-=0.4')
+      .from('.submit-btn', { scale: 0.9, opacity: 0, duration: 0.4 }, '-=0.2');
+});
 </script>
 
 <template>
@@ -42,7 +51,7 @@ const submit = () => {
     <div class="max-w-3xl mx-auto pb-32">
         
         <!-- Header -->
-        <div class="mb-16 text-center">
+        <div class="header-anim mb-16 text-center">
             <h1 class="text-3xl md:text-5xl font-bold text-white tracking-tight leading-tight mb-4">
                 Input <span class="text-transparent bg-clip-text bg-gradient-to-r from-gym-yellow to-gym-red">Kebutuhan.</span>
             </h1>
@@ -52,7 +61,7 @@ const submit = () => {
         <form @submit.prevent="submit" class="space-y-16">
             
             <!-- SECTION 1: GOAL -->
-            <div class="space-y-4">
+            <div class="question-section space-y-4">
                 <h3 class="text-xl font-bold text-white text-center">Apa Tujuan Utama Anda?</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <label class="cursor-pointer">

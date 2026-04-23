@@ -6,6 +6,7 @@ Sistem Informasi berbasis web untuk merekomendasikan Personal Trainer (PT) di Gy
 - **Backend:** Laravel 11 (PHP)
 - **Frontend:** Vue.js 3 + Inertia.js (Composition API)
 - **Styling:** Tailwind CSS + Headless UI / Phosphor Icons
+- **Animasi:** GSAP (GreenSock Animation Platform) untuk UI yang elegan & premium.
 - **Database:** MySQL
 
 ## 🔑 Fitur Utama
@@ -16,6 +17,7 @@ Sistem Informasi berbasis web untuk merekomendasikan Personal Trainer (PT) di Gy
    - Soft Deletes untuk menjaga riwayat transaksi.
    - Proteksi Route menggunakan middleware ketat.
    - *Activity Log* yang lengkap untuk laporan Admin.
+   - UI Teranimasi penuh dengan GSAP (*Staggered entrance* dan transisi dinamis).
 
 ---
 
