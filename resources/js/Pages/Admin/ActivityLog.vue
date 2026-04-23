@@ -1,6 +1,8 @@
 <script setup>
 import MemberLayout from '@/Layouts/MemberLayout.vue';
 import { Head } from '@inertiajs/vue3';
+import { onMounted } from 'vue';
+import gsap from 'gsap';
 import { PhClipboardText, PhCheckCircle, PhXCircle, PhClock, PhUser, PhBarbell } from '@phosphor-icons/vue';
 
 defineProps({
@@ -46,9 +48,17 @@ const getStatusIcon = (status) => {
         case 'rejected': return PhXCircle;
         case 'completed': return PhCheckCircle;
         case 'canceled': return PhXCircle;
+        case 'canceled': return PhXCircle;
         default: return PhClock;
     }
 };
+
+onMounted(() => {
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+    tl.from('.header-anim', { y: 20, opacity: 0, duration: 0.6, clearProps: 'all' })
+      .from('.log-row', { y: 20, opacity: 0, duration: 0.5, stagger: 0.1, clearProps: 'all' }, '-=0.3');
+});
 </script>
 
 <template>
@@ -57,7 +67,7 @@ const getStatusIcon = (status) => {
     <MemberLayout>
         <div class="max-w-6xl mx-auto pb-20">
             <!-- Header -->
-            <div class="mb-10">
+            <div class="header-anim mb-10">
                 <h1 class="text-3xl md:text-5xl font-bold text-white tracking-tight mb-2 flex items-center gap-3">
                     <PhClipboardText class="text-gym-red" />
                     Log <span class="text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-100">Aktivitas.</span>
@@ -84,7 +94,7 @@ const getStatusIcon = (status) => {
                                     Belum ada log aktivitas.
                                 </td>
                             </tr>
-                            <tr v-for="activity in activities" :key="activity.id" class="hover:bg-white/5 transition-colors">
+                            <tr v-for="activity in activities" :key="activity.id" class="log-row hover:bg-white/5 transition-colors">
                                 <td class="py-4 px-4 whitespace-nowrap">
                                     <span class="text-sm text-gray-300">{{ formatDate(activity.created_at) }}</span>
                                 </td>

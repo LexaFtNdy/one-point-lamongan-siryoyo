@@ -1,5 +1,7 @@
 <script setup>
 import { Head, Link } from '@inertiajs/vue3';
+import { onMounted } from 'vue';
+import gsap from 'gsap';
 import { PhClockCounterClockwise, PhCheckCircle, PhXCircle, PhClock, PhUser } from '@phosphor-icons/vue';
 import MemberLayout from '@/Layouts/MemberLayout.vue';
 
@@ -27,13 +29,20 @@ const getStatusConfig = (status) => {
     };
     return map[status] || { label: status, color: 'text-gray-400 bg-gray-400/10 border-gray-400/30', icon: PhClock };
 };
+
+onMounted(() => {
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+    tl.from('.header-anim', { y: 20, opacity: 0, duration: 0.6, clearProps: 'all' })
+      .from('.history-card', { y: 40, opacity: 0, duration: 0.6, stagger: 0.15, clearProps: 'all' }, '-=0.3');
+});
 </script>
 
 <template>
     <Head title="Riwayat Sesi - Trainer" />
 
     <div class="max-w-4xl mx-auto pb-20">
-        <div class="mb-10">
+        <div class="header-anim mb-10">
             <h1 class="text-3xl md:text-5xl font-bold text-white tracking-tight mb-2 flex items-center gap-3">
                 <PhClockCounterClockwise class="text-blue-400" />
                 Riwayat <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Sesi.</span>
@@ -52,7 +61,7 @@ const getStatusConfig = (status) => {
 
         <!-- Session Cards -->
         <div v-else class="space-y-4">
-            <div v-for="booking in bookings" :key="booking.id" class="bg-[#121212]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300">
+            <div v-for="booking in bookings" :key="booking.id" class="history-card bg-[#121212]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300">
                 <div class="flex flex-col sm:flex-row justify-between gap-4">
                     <div class="flex-1">
                         <div class="flex items-center gap-3 mb-3">

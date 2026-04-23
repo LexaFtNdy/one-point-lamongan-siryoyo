@@ -2,7 +2,8 @@
 import { Head, Link, router } from '@inertiajs/vue3';
 import { PhUsers, PhUser, PhBarbell, PhTrash, PhArrowCounterClockwise, PhShieldCheck, PhWarning, PhX } from '@phosphor-icons/vue';
 import MemberLayout from '@/Layouts/MemberLayout.vue';
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+import gsap from 'gsap';
 
 defineOptions({ layout: MemberLayout });
 
@@ -31,13 +32,20 @@ const executeAction = () => {
         }
     });
 };
+
+onMounted(() => {
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+    tl.from('.header-anim', { y: 20, opacity: 0, duration: 0.6, clearProps: 'all' })
+      .from('.user-row', { y: 20, opacity: 0, duration: 0.5, stagger: 0.1, clearProps: 'all' }, '-=0.3');
+});
 </script>
 
 <template>
     <Head title="Kelola Pengguna - Admin" />
 
     <div class="max-w-6xl mx-auto pb-20">
-        <div class="mb-10">
+        <div class="header-anim mb-10">
             <h1 class="text-3xl md:text-5xl font-bold text-white tracking-tight mb-2 flex items-center gap-3">
                 <PhUsers class="text-blue-400" />
                 Kelola <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Pengguna.</span>
@@ -59,7 +67,7 @@ const executeAction = () => {
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-white/5">
-                        <tr v-for="user in users" :key="user.id" :class="['hover:bg-white/5 transition-colors', user.deleted_at ? 'opacity-50' : '']">
+                        <tr v-for="user in users" :key="user.id" :class="['user-row hover:bg-white/5 transition-colors', user.deleted_at ? 'opacity-50' : '']">
                             <td class="py-4 px-4">
                                 <div class="flex items-center gap-3">
                                     <div :class="['w-9 h-9 rounded-full flex items-center justify-center', user.role === 'trainer' ? 'bg-orange-500/20 text-orange-400' : 'bg-blue-500/20 text-blue-400']">

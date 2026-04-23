@@ -1,5 +1,7 @@
 <script setup>
 import { Head, Link } from '@inertiajs/vue3';
+import { onMounted } from 'vue';
+import gsap from 'gsap';
 import { PhUsers, PhBarbell, PhCalendarCheck, PhTrendUp, PhArrowRight, PhCheckCircle, PhXCircle, PhClock, PhChartBar } from '@phosphor-icons/vue';
 import MemberLayout from '@/Layouts/MemberLayout.vue';
 
@@ -14,6 +16,13 @@ const props = defineProps({
 const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString('id-ID', { day: '2-digit', month: 'short', year: 'numeric' });
 };
+
+onMounted(() => {
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+    tl.from('.header-anim', { y: 30, opacity: 0, duration: 0.8, clearProps: 'all' })
+      .from('.dashboard-card', { y: 40, opacity: 0, duration: 0.6, stagger: 0.1, clearProps: 'all' }, '-=0.4');
+});
 </script>
 
 <template>
@@ -22,7 +31,7 @@ const formatDate = (dateString) => {
     <div class="space-y-8 pb-10">
 
         <!-- Welcome Banner -->
-        <div class="relative overflow-hidden rounded-[2.5rem] bg-[#121212]/80 backdrop-blur-xl border border-white/10 p-8 sm:p-12 shadow-[0_20px_60px_rgba(0,0,0,0.5)] group">
+        <div class="header-anim relative overflow-hidden rounded-[2.5rem] bg-[#121212]/80 backdrop-blur-xl border border-white/10 p-8 sm:p-12 shadow-[0_20px_60px_rgba(0,0,0,0.5)] group">
             <div class="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 bg-purple-600/20 rounded-full blur-[100px] pointer-events-none group-hover:bg-purple-500/30 transition-colors duration-700"></div>
 
             <div class="relative z-10">
@@ -39,7 +48,7 @@ const formatDate = (dateString) => {
 
         <!-- Stats Grid -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="relative overflow-hidden bg-[#121212]/60 backdrop-blur-md border border-white/5 rounded-3xl p-6 hover:border-blue-500/30 transition-all duration-500 group transform hover:-translate-y-1">
+            <div class="dashboard-card relative overflow-hidden bg-[#121212]/60 backdrop-blur-md border border-white/5 rounded-3xl p-6 hover:border-blue-500/30 transition-all duration-500 group transform hover:-translate-y-1">
                 <div class="absolute top-0 right-0 w-24 h-24 bg-blue-500/5 rounded-full blur-[40px] group-hover:bg-blue-500/20 transition-colors duration-500"></div>
                 <div class="relative z-10">
                     <div class="w-12 h-12 rounded-2xl bg-blue-500/10 flex items-center justify-center mb-4 border border-blue-500/20">
@@ -50,7 +59,7 @@ const formatDate = (dateString) => {
                 </div>
             </div>
 
-            <div class="relative overflow-hidden bg-[#121212]/60 backdrop-blur-md border border-white/5 rounded-3xl p-6 hover:border-orange-500/30 transition-all duration-500 group transform hover:-translate-y-1">
+            <div class="dashboard-card relative overflow-hidden bg-[#121212]/60 backdrop-blur-md border border-white/5 rounded-3xl p-6 hover:border-orange-500/30 transition-all duration-500 group transform hover:-translate-y-1">
                 <div class="absolute top-0 right-0 w-24 h-24 bg-orange-500/5 rounded-full blur-[40px] group-hover:bg-orange-500/20 transition-colors duration-500"></div>
                 <div class="relative z-10">
                     <div class="w-12 h-12 rounded-2xl bg-orange-500/10 flex items-center justify-center mb-4 border border-orange-500/20">
@@ -61,7 +70,7 @@ const formatDate = (dateString) => {
                 </div>
             </div>
 
-            <div class="relative overflow-hidden bg-[#121212]/60 backdrop-blur-md border border-white/5 rounded-3xl p-6 hover:border-emerald-500/30 transition-all duration-500 group transform hover:-translate-y-1">
+            <div class="dashboard-card relative overflow-hidden bg-[#121212]/60 backdrop-blur-md border border-white/5 rounded-3xl p-6 hover:border-emerald-500/30 transition-all duration-500 group transform hover:-translate-y-1">
                 <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-full blur-[40px] group-hover:bg-emerald-500/20 transition-colors duration-500"></div>
                 <div class="relative z-10">
                     <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-4 border border-emerald-500/20">
@@ -72,7 +81,7 @@ const formatDate = (dateString) => {
                 </div>
             </div>
 
-            <div class="relative overflow-hidden bg-[#121212]/60 backdrop-blur-md border border-white/5 rounded-3xl p-6 hover:border-purple-500/30 transition-all duration-500 group transform hover:-translate-y-1">
+            <div class="dashboard-card relative overflow-hidden bg-[#121212]/60 backdrop-blur-md border border-white/5 rounded-3xl p-6 hover:border-purple-500/30 transition-all duration-500 group transform hover:-translate-y-1">
                 <div class="absolute top-0 right-0 w-24 h-24 bg-purple-500/5 rounded-full blur-[40px] group-hover:bg-purple-500/20 transition-colors duration-500"></div>
                 <div class="relative z-10">
                     <div class="w-12 h-12 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-4 border border-purple-500/20">
@@ -85,7 +94,7 @@ const formatDate = (dateString) => {
         </div>
 
         <!-- Booking Status Breakdown -->
-        <div class="bg-[#121212]/80 backdrop-blur-xl border border-white/10 rounded-[2rem] p-6 md:p-8">
+        <div class="dashboard-card bg-[#121212]/80 backdrop-blur-xl border border-white/10 rounded-[2rem] p-6 md:p-8">
             <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
                 <PhChartBar :size="24" class="text-gym-yellow" weight="duotone" /> Breakdown Status Booking
             </h2>
@@ -114,7 +123,7 @@ const formatDate = (dateString) => {
         </div>
 
         <!-- Recent Bookings -->
-        <div class="bg-[#121212]/80 backdrop-blur-xl border border-white/10 rounded-[2rem] p-6 md:p-8">
+        <div class="dashboard-card bg-[#121212]/80 backdrop-blur-xl border border-white/10 rounded-[2rem] p-6 md:p-8">
             <div class="flex items-center justify-between mb-6">
                 <h2 class="text-xl font-bold text-white flex items-center gap-2">
                     <PhTrendUp :size="24" class="text-gym-red" weight="duotone" /> Aktivitas Terbaru

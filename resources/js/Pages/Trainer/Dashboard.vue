@@ -1,5 +1,7 @@
 <script setup>
 import { Head, Link } from '@inertiajs/vue3';
+import { onMounted } from 'vue';
+import gsap from 'gsap';
 import { PhCalendarCheck } from '@phosphor-icons/vue';
 import MemberLayout from '@/Layouts/MemberLayout.vue';
 
@@ -14,6 +16,13 @@ const props = defineProps({
 const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' });
 };
+
+onMounted(() => {
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+    tl.from('.header-anim', { y: 30, opacity: 0, duration: 0.8, clearProps: 'all' })
+      .from('.dashboard-card', { y: 40, opacity: 0, duration: 0.6, stagger: 0.15, clearProps: 'all' }, '-=0.4');
+});
 </script>
 
 <template>
@@ -32,7 +41,7 @@ const formatDate = (dateString) => {
         </div>
 
         <!-- Premium Welcome Banner untuk Trainer -->
-        <div class="relative overflow-hidden rounded-[2.5rem] bg-[#121212]/80 backdrop-blur-xl border border-white/10 p-8 sm:p-12 shadow-[0_20px_60px_rgba(0,0,0,0.5)] group mb-8">
+        <div class="header-anim relative overflow-hidden rounded-[2.5rem] bg-[#121212]/80 backdrop-blur-xl border border-white/10 p-8 sm:p-12 shadow-[0_20px_60px_rgba(0,0,0,0.5)] group mb-8">
             <div class="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 bg-blue-600/20 rounded-full blur-[100px] pointer-events-none group-hover:bg-blue-500/30 transition-colors duration-700"></div>
             
             <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
@@ -67,7 +76,7 @@ const formatDate = (dateString) => {
         </div>
 
         <div v-else class="space-y-4">
-            <div v-for="booking in bookings" :key="booking.id" class="bg-[#121212]/80 border border-white/10 rounded-3xl p-6 hover:border-white/20 transition-colors">
+            <div v-for="booking in bookings" :key="booking.id" class="dashboard-card bg-[#121212]/80 border border-white/10 rounded-3xl p-6 hover:border-white/20 transition-colors">
                 <div class="flex flex-col md:flex-row justify-between gap-6">
                     <!-- Info Member -->
                     <div class="flex-1">
