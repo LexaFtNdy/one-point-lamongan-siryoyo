@@ -1,8 +1,8 @@
 <script setup>
-import { Head, Link, useForm } from '@inertiajs/vue3';
+import { Head, Link, useForm, router } from '@inertiajs/vue3';
 import { ref, computed, onMounted } from 'vue';
 import gsap from 'gsap';
-import { PhUser, PhStar, PhCurrencyCircleDollar, PhArrowRight, PhFaders, PhCalendarCheck, PhX } from '@phosphor-icons/vue';
+import { PhUser, PhStar, PhCurrencyCircleDollar, PhArrowRight, PhFaders, PhCalendarCheck, PhX, PhMedal } from '@phosphor-icons/vue';
 import MemberLayout from '@/Layouts/MemberLayout.vue';
 
 defineOptions({ layout: MemberLayout });
@@ -37,6 +37,10 @@ const openModal = (trainer) => {
         form.shift = trainer.available_shifts[0];
     }
     isModalOpen.value = true;
+};
+
+const goToProfile = (trainer) => {
+    router.visit(route('trainer.show', trainer.id));
 };
 
 const submitBooking = () => {
@@ -114,7 +118,11 @@ onMounted(() => {
             <div 
                 v-for="(trainer, index) in exact_matches" 
                 :key="trainer.id"
-                class="trainer-card relative overflow-hidden bg-[#121212]/60 backdrop-blur-xl border border-white/5 rounded-[2rem] p-8 transition-all duration-500 group transform hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] hover:border-white/10 flex flex-col h-full"
+                class="trainer-card relative overflow-hidden bg-[#121212]/60 backdrop-blur-xl border border-white/5 rounded-[2rem] p-8 transition-all duration-500 group transform hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] hover:border-white/10 flex flex-col h-full cursor-pointer"
+                role="button"
+                tabindex="0"
+                @click="goToProfile(trainer)"
+                @keydown.enter="goToProfile(trainer)"
             >
                 <div class="absolute top-0 right-0 w-48 h-48 bg-gym-red/5 rounded-full blur-[60px] group-hover:bg-gym-red/15 transition-colors duration-700 pointer-events-none"></div>
 
@@ -153,9 +161,15 @@ onMounted(() => {
                     </div>
 
                     <!-- Description -->
-                    <p class="text-base text-gray-400 leading-relaxed mb-8 line-clamp-3 flex-grow font-light">
+                    <p class="text-base text-gray-400 leading-relaxed mb-4 line-clamp-3 flex-grow font-light">
                         "{{ trainer.description || 'Belum ada deskripsi profil.' }}"
                     </p>
+
+                    <!-- Credential Badge -->
+                    <div v-if="trainer.verified_credentials_count > 0" class="flex items-center gap-1.5 mb-4">
+                        <PhMedal :size="16" weight="fill" class="text-emerald-400" />
+                        <span class="text-xs font-bold text-emerald-400">{{ trainer.verified_credentials_count }} Kredensial Terverifikasi</span>
+                    </div>
 
                     <!-- Bottom Section: Price & Action -->
                     <div class="pt-6 border-t border-white/5 mt-auto flex items-end justify-between">
@@ -164,7 +178,7 @@ onMounted(() => {
                             <p class="text-white font-bold text-xl tracking-tight">{{ formatRupiah(trainer.price_per_session) }} <span class="text-sm text-gray-500 font-normal">/ session</span></p>
                         </div>
                         
-                        <button @click="openModal(trainer)" class="w-14 h-14 rounded-full bg-white text-black flex items-center justify-center hover:bg-gray-200 transition-colors duration-300 group/btn shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]">
+                        <button @click.stop="openModal(trainer)" class="w-14 h-14 rounded-full bg-white text-black flex items-center justify-center hover:bg-gray-200 transition-colors duration-300 group/btn shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]">
                             <PhArrowRight :size="24" weight="bold" class="group-hover/btn:translate-x-1 transition-transform" />
                         </button>
                     </div>
@@ -199,7 +213,11 @@ onMounted(() => {
                     <div 
                         v-for="(trainer, index) in alternatives.slice(0, 3)" 
                         :key="trainer.id"
-                        class="relative overflow-hidden bg-[#121212]/60 backdrop-blur-xl border border-white/5 rounded-[2rem] p-8 transition-all duration-500 group hover:border-blue-500/30 flex flex-col h-full"
+                        class="relative overflow-hidden bg-[#121212]/60 backdrop-blur-xl border border-white/5 rounded-[2rem] p-8 transition-all duration-500 group hover:border-blue-500/30 flex flex-col h-full cursor-pointer"
+                        role="button"
+                        tabindex="0"
+                        @click="goToProfile(trainer)"
+                        @keydown.enter="goToProfile(trainer)"
                     >
                         <div class="absolute top-0 right-0 w-48 h-48 bg-blue-500/5 rounded-full blur-[60px] group-hover:bg-blue-500/15 transition-colors duration-700 pointer-events-none"></div>
 
@@ -229,13 +247,18 @@ onMounted(() => {
                                 </span>
                             </div>
 
+                            <div v-if="trainer.verified_credentials_count > 0" class="flex items-center gap-1.5 mb-4">
+                                <PhMedal :size="14" weight="fill" class="text-emerald-400" />
+                                <span class="text-xs font-bold text-emerald-400">{{ trainer.verified_credentials_count }} Kredensial</span>
+                            </div>
+
                             <div class="pt-6 border-t border-white/5 mt-auto flex items-end justify-between">
                                 <div>
                                     <p class="text-xs text-gray-500 uppercase tracking-widest font-semibold mb-1">Tarif</p>
                                     <p class="text-white font-bold text-lg tracking-tight">{{ formatRupiah(trainer.price_per_session) }}</p>
                                 </div>
                                 
-                                <button @click="openModal(trainer)" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-colors text-sm">
+                                <button @click.stop="openModal(trainer)" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-colors text-sm">
                                     Pilih PT
                                 </button>
                             </div>

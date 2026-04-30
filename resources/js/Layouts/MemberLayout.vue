@@ -1,6 +1,6 @@
 <script setup>
 import { Link, usePage } from '@inertiajs/vue3';
-import { PhHouse, PhMagnifyingGlass, PhCalendarCheck, PhUser, PhSignOut, PhUsers, PhClipboardText, PhClockCounterClockwise, PhChartBar } from '@phosphor-icons/vue';
+import { PhHouse, PhMagnifyingGlass, PhCalendarCheck, PhUser, PhSignOut, PhUsers, PhClipboardText, PhClockCounterClockwise, PhChartBar, PhMedal } from '@phosphor-icons/vue';
 import { Toaster, toast } from 'vue-sonner';
 import { computed, watch } from 'vue';
 
@@ -52,9 +52,9 @@ watch(() => page.props.flash, (flash) => {
                 <template v-if="$page.props.auth.user.role === 'member'">
                     <Link
                         :href="route('member.find-pt')"
-                        :class="['flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-all duration-300', isActiveAny('Member/FindTrainer', 'Member/Catalog') ? 'bg-white/10 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.1)]' : 'text-gray-400 hover:text-white hover:bg-white/5']"
+                        :class="['flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-all duration-300', isActiveAny('Member/FindTrainer', 'Member/Catalog', 'Member/TrainerProfile') ? 'bg-white/10 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.1)]' : 'text-gray-400 hover:text-white hover:bg-white/5']"
                     >
-                        <PhMagnifyingGlass :size="18" :weight="isActiveAny('Member/FindTrainer', 'Member/Catalog') ? 'bold' : 'regular'" /> Rekomendasi PT
+                        <PhMagnifyingGlass :size="18" :weight="isActiveAny('Member/FindTrainer', 'Member/Catalog', 'Member/TrainerProfile') ? 'bold' : 'regular'" /> Rekomendasi PT
                     </Link>
                     <Link
                         :href="route('member.bookings')"
@@ -81,6 +81,15 @@ watch(() => page.props.flash, (flash) => {
                         :class="['flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-all duration-300', isActive('Admin/Users') ? 'bg-white/10 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.1)]' : 'text-gray-400 hover:text-white hover:bg-white/5']"
                     >
                         <PhUsers :size="18" :weight="isActive('Admin/Users') ? 'fill' : 'regular'" /> Kelola Pengguna
+                    </Link>
+                    <Link
+                        :href="route('admin.achievements')"
+                        :class="['flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 relative', isActive('Admin/Achievements') ? 'bg-white/10 text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.1)]' : 'text-gray-400 hover:text-white hover:bg-white/5']"
+                    >
+                        <PhMedal :size="18" :weight="isActive('Admin/Achievements') ? 'fill' : 'regular'" /> Verifikasi Kredensial
+                        <span v-if="$page.props.pending_achievements_count > 0" class="absolute -top-1 -right-1 bg-red-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full border-2 border-[#121212]">
+                            {{ $page.props.pending_achievements_count }}
+                        </span>
                     </Link>
                     <Link
                         :href="route('admin.activity-log')"
@@ -132,9 +141,9 @@ watch(() => page.props.flash, (flash) => {
             <!-- MEMBER MOBILE NAV -->
             <template v-if="$page.props.auth.user.role === 'member'">
                 <Link :href="route('member.find-pt')" class="relative flex flex-col items-center gap-1 px-4 py-1">
-                    <div v-if="isActiveAny('Member/FindTrainer', 'Member/Catalog')" class="absolute -top-3 w-8 h-1 bg-gym-yellow rounded-full shadow-[0_0_10px_rgba(255,193,7,0.8)]"></div>
-                    <PhMagnifyingGlass :size="24" :weight="isActiveAny('Member/FindTrainer', 'Member/Catalog') ? 'bold' : 'regular'" :class="isActiveAny('Member/FindTrainer', 'Member/Catalog') ? 'text-gym-yellow' : 'text-gray-400'" />
-                    <span :class="['text-[10px] font-medium transition-colors', isActiveAny('Member/FindTrainer', 'Member/Catalog') ? 'text-gym-yellow' : 'text-gray-500']">PT</span>
+                    <div v-if="isActiveAny('Member/FindTrainer', 'Member/Catalog', 'Member/TrainerProfile')" class="absolute -top-3 w-8 h-1 bg-gym-yellow rounded-full shadow-[0_0_10px_rgba(255,193,7,0.8)]"></div>
+                    <PhMagnifyingGlass :size="24" :weight="isActiveAny('Member/FindTrainer', 'Member/Catalog', 'Member/TrainerProfile') ? 'bold' : 'regular'" :class="isActiveAny('Member/FindTrainer', 'Member/Catalog', 'Member/TrainerProfile') ? 'text-gym-yellow' : 'text-gray-400'" />
+                    <span :class="['text-[10px] font-medium transition-colors', isActiveAny('Member/FindTrainer', 'Member/Catalog', 'Member/TrainerProfile') ? 'text-gym-yellow' : 'text-gray-500']">PT</span>
                 </Link>
                 <Link :href="route('member.bookings')" class="relative flex flex-col items-center gap-1 px-4 py-1">
                     <div v-if="isActive('Member/MyBookings')" class="absolute -top-3 w-8 h-1 bg-gym-yellow rounded-full shadow-[0_0_10px_rgba(255,193,7,0.8)]"></div>
@@ -158,6 +167,16 @@ watch(() => page.props.flash, (flash) => {
                     <div v-if="isActive('Admin/Users')" class="absolute -top-3 w-8 h-1 bg-gym-yellow rounded-full shadow-[0_0_10px_rgba(255,193,7,0.8)]"></div>
                     <PhUsers :size="24" :weight="isActive('Admin/Users') ? 'fill' : 'regular'" :class="isActive('Admin/Users') ? 'text-gym-yellow' : 'text-gray-400'" />
                     <span :class="['text-[10px] font-medium transition-colors', isActive('Admin/Users') ? 'text-gym-yellow' : 'text-gray-500']">Users</span>
+                </Link>
+                <Link :href="route('admin.achievements')" class="relative flex flex-col items-center gap-1 px-4 py-1">
+                    <div v-if="isActive('Admin/Achievements')" class="absolute -top-3 w-8 h-1 bg-gym-yellow rounded-full shadow-[0_0_10px_rgba(255,193,7,0.8)]"></div>
+                    <div class="relative">
+                        <PhMedal :size="24" :weight="isActive('Admin/Achievements') ? 'fill' : 'regular'" :class="isActive('Admin/Achievements') ? 'text-gym-yellow' : 'text-gray-400'" />
+                        <span v-if="$page.props.pending_achievements_count > 0" class="absolute -top-1 -right-2 bg-red-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full border-2 border-[#121212]">
+                            {{ $page.props.pending_achievements_count }}
+                        </span>
+                    </div>
+                    <span :class="['text-[10px] font-medium transition-colors', isActive('Admin/Achievements') ? 'text-gym-yellow' : 'text-gray-500']">Verify</span>
                 </Link>
                 <Link :href="route('admin.activity-log')" class="relative flex flex-col items-center gap-1 px-4 py-1">
                     <div v-if="isActive('Admin/ActivityLog')" class="absolute -top-3 w-8 h-1 bg-gym-yellow rounded-full shadow-[0_0_10px_rgba(255,193,7,0.8)]"></div>

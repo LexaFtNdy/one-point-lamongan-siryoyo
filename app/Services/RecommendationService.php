@@ -18,6 +18,8 @@ class RecommendationService
         // 2. Fetch Base Query
         $query = TrainerProfile::with(['user' => function($q) {
             $q->select('id', 'name', 'gender', 'email');
+        }])->withCount(['achievements as verified_credentials_count' => function ($q) {
+            $q->where('status', 'approved')->where('visibility', 'public');
         }]);
 
         if ($preferences['gender_preference'] !== 'no_preference') {
@@ -109,6 +111,8 @@ class RecommendationService
         if ($exactMatches->isEmpty() && $preferences['gender_preference'] !== 'no_preference') {
             $allTrainers = TrainerProfile::with(['user' => function($q) {
                 $q->select('id', 'name', 'gender', 'email');
+            }])->withCount(['achievements as verified_credentials_count' => function ($q) {
+                $q->where('status', 'approved')->where('visibility', 'public');
             }])->get();
 
             $alternatives = $allTrainers->map(function ($trainer) use ($preferences, $isObese, $isUnderweight) {

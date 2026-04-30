@@ -77,7 +77,7 @@ onMounted(() => {
 
             <!-- Activity Table -->
             <div class="bg-[#121212]/80 backdrop-blur-xl border border-white/10 rounded-[2rem] p-6 md:p-8 shadow-2xl overflow-hidden">
-                <div class="overflow-x-auto">
+                <div class="overflow-x-auto scrollbar-hide">
                     <table class="w-full text-left border-collapse">
                         <thead>
                             <tr class="border-b border-white/10">

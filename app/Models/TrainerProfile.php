@@ -30,4 +30,9 @@ class TrainerProfile extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function achievements()
+    {
+        return $this->hasMany(TrainerAchievement::class)->latest();
+    }
 }

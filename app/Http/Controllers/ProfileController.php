@@ -21,7 +21,7 @@ class ProfileController extends Controller
         $user = $request->user();
         
         // Eager load necessary profiles
-        $user->load(['memberProfile', 'trainerProfile']);
+        $user->load(['memberProfile', 'trainerProfile.achievements']);
 
         return Inertia::render('Profile/Edit', [
             'mustVerifyEmail' => $user instanceof MustVerifyEmail,

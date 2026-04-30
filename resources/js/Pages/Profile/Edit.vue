@@ -5,8 +5,9 @@ import UpdatePasswordForm from './Partials/UpdatePasswordForm.vue';
 import UpdateProfileInformationForm from './Partials/UpdateProfileInformationForm.vue';
 import MemberFitnessForm from './Partials/MemberFitnessForm.vue';
 import TrainerParameterForm from './Partials/TrainerParameterForm.vue';
+import TrainerAchievementsForm from './Partials/TrainerAchievementsForm.vue';
 import { Head, Link } from '@inertiajs/vue3';
-import { PhUserCircle, PhGear, PhHeartbeat, PhSlidersHorizontal } from '@phosphor-icons/vue';
+import { PhUserCircle, PhGear, PhHeartbeat, PhSlidersHorizontal, PhMedal } from '@phosphor-icons/vue';
 
 defineProps({
     mustVerifyEmail: {
@@ -72,6 +73,17 @@ defineProps({
                             Parameter PT
                         </Link>
 
+                        <!-- Force HMR Reload -->
+                        <Link 
+                            v-if="$page.props.auth.user.role === 'trainer'"
+                            :href="route('profile.edit', { tab: 'achievements' })"
+                            class="flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition-all whitespace-nowrap"
+                            :class="tab === 'achievements' ? 'bg-emerald-500/20 text-emerald-400 shadow-[inset_0_1px_0_rgba(16,185,129,0.2)]' : 'text-gray-400 hover:text-white hover:bg-white/5'"
+                        >
+                            <PhMedal :size="20" :weight="tab === 'achievements' ? 'fill' : 'regular'" />
+                            Kredensial
+                        </Link>
+
                         <div class="w-px md:w-full md:h-px bg-white/10 my-2 mx-2 md:mx-0 shrink-0"></div>
 
                         <Link 
@@ -104,6 +116,11 @@ defineProps({
                     <!-- TAB: TRAINER PARAMETER -->
                     <div v-if="tab === 'parameter' && $page.props.auth.user.role === 'trainer'" class="animate-fade-in">
                         <TrainerParameterForm :profile="userProfile" />
+                    </div>
+
+                    <!-- TAB: TRAINER ACHIEVEMENTS -->
+                    <div v-if="tab === 'achievements' && $page.props.auth.user.role === 'trainer'" class="animate-fade-in">
+                        <TrainerAchievementsForm :profile="userProfile" />
                     </div>
 
                     <!-- TAB: SECURITY (Password & Delete) -->

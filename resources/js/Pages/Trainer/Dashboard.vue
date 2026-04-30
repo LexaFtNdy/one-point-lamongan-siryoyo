@@ -2,7 +2,7 @@
 import { Head, Link } from '@inertiajs/vue3';
 import { onMounted } from 'vue';
 import gsap from 'gsap';
-import { PhCalendarCheck } from '@phosphor-icons/vue';
+import { PhCalendarCheck, PhMedal, PhCheckCircle, PhClock, PhXCircle } from '@phosphor-icons/vue';
 import MemberLayout from '@/Layouts/MemberLayout.vue';
 
 defineOptions({ layout: MemberLayout });
@@ -10,7 +10,8 @@ defineOptions({ layout: MemberLayout });
 const props = defineProps({
     auth: Object,
     bookings: Array,
-    hasProfile: Boolean
+    hasProfile: Boolean,
+    credentialStats: { type: Object, default: () => ({ approved: 0, pending: 0, rejected: 0 }) },
 });
 
 const formatDate = (dateString) => {
@@ -60,6 +61,31 @@ onMounted(() => {
                     <Link :href="route('trainer.setup')" class="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold rounded-full transition-all flex items-center gap-2">
                         Edit Parameter
                     </Link>
+                </div>
+            </div>
+        </div>
+
+        <!-- Credential Stats Card -->
+        <div v-if="hasProfile" class="dashboard-card bg-[#121212]/80 border border-white/10 rounded-3xl p-6 mb-2">
+            <div class="flex items-center gap-2 mb-4">
+                <PhMedal :size="24" class="text-amber-400" weight="duotone" />
+                <h3 class="text-lg font-bold text-white">Status Kredensial</h3>
+            </div>
+            <div class="grid grid-cols-3 gap-4">
+                <div class="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-4 text-center">
+                    <PhCheckCircle :size="20" class="text-emerald-400 mx-auto mb-1" weight="fill" />
+                    <p class="text-2xl font-bold text-emerald-400">{{ credentialStats.approved || 0 }}</p>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-wider font-bold">Disetujui</p>
+                </div>
+                <div class="bg-amber-500/10 border border-amber-500/20 rounded-xl p-4 text-center">
+                    <PhClock :size="20" class="text-amber-400 mx-auto mb-1" weight="fill" />
+                    <p class="text-2xl font-bold text-amber-400">{{ credentialStats.pending || 0 }}</p>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-wider font-bold">Menunggu</p>
+                </div>
+                <div class="bg-red-500/10 border border-red-500/20 rounded-xl p-4 text-center">
+                    <PhXCircle :size="20" class="text-red-400 mx-auto mb-1" weight="fill" />
+                    <p class="text-2xl font-bold text-red-400">{{ credentialStats.rejected || 0 }}</p>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-wider font-bold">Ditolak</p>
                 </div>
             </div>
         </div>

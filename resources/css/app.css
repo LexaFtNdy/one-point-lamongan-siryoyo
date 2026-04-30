@@ -14,3 +14,24 @@
     @apply bg-slate-900 text-slate-50 font-sans antialiased selection:bg-yellow-500/30 selection:text-yellow-200;
   }
 }
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  .custom-scroll,
+  .custom-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .custom-scroll::-webkit-scrollbar,
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}

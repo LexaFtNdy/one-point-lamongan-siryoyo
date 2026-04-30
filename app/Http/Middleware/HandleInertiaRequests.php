@@ -29,6 +29,11 @@ class HandleInertiaRequests extends Middleware
      */
     public function share(Request $request): array
     {
+        $pendingAchievementsCount = 0;
+        if ($request->user() && $request->user()->role === 'admin') {
+            $pendingAchievementsCount = \App\Models\TrainerAchievement::where('status', 'pending')->count();
+        }
+
         return [
             ...parent::share($request),
             'auth' => [
@@ -38,6 +43,7 @@ class HandleInertiaRequests extends Middleware
                 'success' => $request->session()->get('success'),
                 'error' => $request->session()->get('error'),
             ],
+            'pending_achievements_count' => $pendingAchievementsCount,
         ];
     }
 }

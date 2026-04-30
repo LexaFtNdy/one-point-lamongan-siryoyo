@@ -40,7 +40,7 @@ onMounted(() => {
         </div>
 
         <!-- Right Side (Dynamic Content) -->
-        <div class="w-full lg:w-7/12 flex items-center justify-center p-8 sm:p-12 lg:p-24 bg-[#0A0A0A] relative overflow-y-auto">
+        <div class="w-full lg:w-7/12 flex items-center justify-center p-8 sm:p-12 lg:p-24 bg-[#0A0A0A] relative overflow-y-auto scrollbar-hide">
             <!-- Vue Transition for buttery smooth page swaps -->
             <transition name="auth-slide" mode="out-in">
                 <div :key="$page.url" class="w-full max-w-md relative z-10 py-10">
